@@ -232,12 +232,12 @@ function renderContent() {
     header.className = "unit-header";
     header.style.background = activeSubject.theme.bg;
     header.innerHTML = `
-      <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <div class="unit-header-content">
         <div>
           <div class="unit-title" style="color:${activeSubject.theme.primary}">${unitObj.title}</div>
           <div class="unit-sub" style="color:${activeSubject.theme.primary}">${unitObj.sub}</div>
         </div>
-        <a href="https://www.youtube.com/results?search_query=${encodeURIComponent(activeSubject.label + ' ' + unitObj.sub + ' playlist')}" target="_blank" rel="noopener noreferrer" style="background: ${activeSubject.theme.primary}; color: white; padding: 0.4rem 0.8rem; border-radius: 6px; text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 0.4rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'" title="Search for a YouTube playlist on this topic">
+        <a href="https://www.youtube.com/results?search_query=${encodeURIComponent(activeSubject.label + ' ' + unitObj.sub + ' playlist')}" target="_blank" rel="noopener noreferrer" class="playlist-btn" style="background: ${activeSubject.theme.primary}; color: white;" title="Search for a YouTube playlist on this topic">
           <span style="font-size: 1rem;">▶️</span> Playlist
         </a>
       </div>
