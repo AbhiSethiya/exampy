@@ -22,6 +22,40 @@ function init() {
     searchQuery = e.target.value.toLowerCase();
     renderContent();
   });
+
+  // Dark Mode Toggle Logic
+  const themeToggle = document.getElementById("theme-toggle");
+  const currentTheme = localStorage.getItem("theme");
+  
+  if (currentTheme === "dark") {
+    document.documentElement.setAttribute("data-theme", "dark");
+    themeToggle.innerHTML = '<span class="icon">☀️</span>';
+  }
+
+  themeToggle.addEventListener("click", () => {
+    let theme = document.documentElement.getAttribute("data-theme");
+    if (theme === "dark") {
+      document.documentElement.removeAttribute("data-theme");
+      localStorage.setItem("theme", "light");
+      themeToggle.innerHTML = '<span class="icon">🌙</span>';
+      updateBackground(activeSubjectId);
+    } else {
+      document.documentElement.setAttribute("data-theme", "dark");
+      localStorage.setItem("theme", "dark");
+      themeToggle.innerHTML = '<span class="icon">☀️</span>';
+      document.body.style.background = 'var(--bg-gradient)';
+    }
+  });
+}
+
+function updateBackground(subjectId) {
+  const subject = subjectsData.find(s => s.id === subjectId);
+  const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+  if (!isDark) {
+    document.body.style.background = `linear-gradient(135deg, ${subject.theme.bg} 0%, rgba(255,255,255,0.8) 100%)`;
+  } else {
+    document.body.style.background = 'var(--bg-gradient)';
+  }
 }
 
 // Render Subject Tabs
@@ -44,8 +78,7 @@ function renderTabs() {
       searchQuery = ""; // Reset search
       searchInput.value = "";
       
-      // Update global background subtle tint
-      document.body.style.background = `linear-gradient(135deg, ${subject.theme.bg} 0%, rgba(255,255,255,0.8) 100%)`;
+      updateBackground(subject.id);
       
       renderTabs();
       renderUnitFilters();

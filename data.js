@@ -299,6 +299,134 @@ const subjectsData = [
         ]
       }
     ]
+  },
+  {
+    id: "xml",
+    label: "Programming with XML",
+    theme: { primary: "#D85A30", bg: "#FAECE720" },
+    units: [
+      {
+        unit: 1, title: "Unit 1", sub: "XML Basics",
+        questions: [
+          { q: "Define XML / What is XML? Explain its features / benefits / basic rules for writing an XML document.", freq: "must", marks: [2,5] },
+          { q: "Differentiate between XML and HTML (purpose, syntax, data handling — at least 3 differences).", freq: "must", marks: [3,5] },
+          { q: "Explain elements and attributes in XML with examples (including empty elements).", freq: "must", marks: [3,5] },
+          { q: "How to validate an XML document? Explain XML validation with a suitable example (DTD + Schema techniques).", freq: "must", marks: [5] },
+          { q: "Create / write an XML document structure for a Notebook (with notes, attributes for date and priority).", freq: "high", marks: [5] },
+          { q: "Explain XML Tools and XML Validation with example.", freq: "high", marks: [5] }
+        ]
+      },
+      {
+        unit: 2, title: "Unit 2", sub: "DTD (Document Type Definition)",
+        questions: [
+          { q: "What is DTD? Explain its advantages and disadvantages.", freq: "must", marks: [5,8] },
+          { q: "Explain internal and external DTDs and write differences between them (at least four).", freq: "must", marks: [8] },
+          { q: "Define all four DTD concepts with examples: (a) Element with children (b) Empty elements (c) Number of occurrences (d) Defining choices.", freq: "must", marks: [8] },
+          { q: "Write a DTD snippet / external DTD for a Notebook XML. Explain how to link DTD to an XML file.", freq: "high", marks: [5,8] },
+          { q: "What do you mean by empty elements and number of occurrences in DTD? (short answer)", freq: "low", marks: [2] }
+        ]
+      },
+      {
+        unit: 3, title: "Unit 3", sub: "XML Schema (XSD)",
+        questions: [
+          { q: "Explain simple and complex data types in XML Schema with examples.", freq: "must", marks: [3,8] },
+          { q: "How to link and validate XML with a Schema (XSD)? Explain with example.", freq: "must", marks: [7] },
+          { q: "Write an XML Schema (XSD) for a Notebook structure with &lt;note&gt; containing &lt;title&gt;, &lt;content&gt;, and a date attribute.", freq: "must", marks: [5,7] },
+          { q: "Explain attributes in XML and restrictions on values with examples.", freq: "high", marks: [7] },
+          { q: "Analyze the advantages of using XML Schema over DTD and explain a scenario where Schema is preferable.", freq: "high", marks: [5] },
+          { q: "What is an XML Namespace? Why is it important?", freq: "low", marks: [2] }
+        ]
+      },
+      {
+        unit: 4, title: "Unit 4", sub: "XSL / XSLT",
+        questions: [
+          { q: "Define xsl:output, xsl:template, and xsl:apply-templates with examples.", freq: "must", marks: [6] },
+          { q: "How to transform an XML file into HTML using XSL transformation (XSLT)? Explain with example.", freq: "must", marks: [6,7] },
+          { q: "Create a XSLT for a Notebook XML and generate output in different conditions (with xsl:if / xsl:for-each).", freq: "must", marks: [6] },
+          { q: "What is XSL? Explain layout and templates for XSL. Describe linking XSL to an XML source with example.", freq: "high", marks: [4] },
+          { q: "How does &lt;xsl:for-each&gt; loop work in XSLT? Give an example that loops over a list of nodes.", freq: "high", marks: [5] },
+          { q: "How does &lt;xsl:if&gt; work in XSLT? Write an example where it is used to display elements based on a condition.", freq: "high", marks: [5] },
+          { q: "What is the identity template in XSL? Why do you use it? Explain with example.", freq: "low", marks: [7] },
+          { q: "Analyze the structure of an XSL document and explain how templates achieve separation of content and presentation.", freq: "low", marks: [5] }
+        ]
+      },
+      {
+        unit: 5, title: "Unit 5", sub: "XPath",
+        questions: [
+          { q: "What is XPath? Explain how XPath is used to navigate an XML document (with location paths, axes, examples).", freq: "must", marks: [4,6] },
+          { q: "Explain different types of operators in XPath with examples (comparison, boolean, string — any five).", freq: "must", marks: [6] },
+          { q: "What are predicates in XPath? Explain their uses and different conditions for using predicates.", freq: "must", marks: [5] },
+          { q: "Enlist the types of nodes in XPath. How to define relationships among nodes?", freq: "high", marks: [6] },
+          { q: "What are the main features of XPath? (list at least 5)", freq: "high", marks: [5] },
+          { q: "Compare ancestor:: and preceding-sibling:: axes in XPath with examples.", freq: "low", marks: [5] },
+          { q: "Create an XML file for student information. Apply validation, schema, and XSLT for it and display in browser.", freq: "low", marks: [5] }
+        ]
+      }
+    ]
+  },
+  {
+    id: "rm",
+    label: "Research Methodology",
+    theme: { primary: "#BA7517", bg: "#FAEEDA20" },
+    units: [
+      {
+        unit: 1, title: "Unit 1", sub: "Research Fundamentals & Process",
+        questions: [
+          { q: "Explain the research process in detail (with diagram / feed-forward & feedback).", freq: "must", marks: [5,7] },
+          { q: "Differentiate between Research Method and Research Methodology with examples.", freq: "must", marks: [3,6] },
+          { q: "Explain the key differences between Fundamental (Basic) and Applied Research with suitable examples.", freq: "must", marks: [2,5] },
+          { q: "Illustrate the characteristics of good research and explain how they contribute to reliable results.", freq: "must", marks: [5] },
+          { q: "Research is much concerned with proper fact finding, analysis, and evaluation. Do you agree? Give reasons.", freq: "high", marks: [2,3] },
+          { q: "Enlist the objectives / significance of research. What is the significance of research in modern society?", freq: "high", marks: [2,4] },
+          { q: "Explain Descriptive research with a suitable example.", freq: "low", marks: [5] }
+        ]
+      },
+      {
+        unit: 2, title: "Unit 2", sub: "Literature Review & Research Problem",
+        questions: [
+          { q: "Write the importance of a literature review in defining a problem. How is it helpful for identifying gap areas?", freq: "must", marks: [8] },
+          { q: "Discuss the steps involved in defining and formulating a research problem. How does properly defining it contribute to a study's success?", freq: "must", marks: [6,8] },
+          { q: "What is a critical literature review, and how is it helpful for identifying gap areas in existing research?", freq: "must", marks: [2,6] },
+          { q: "Explain primary and secondary sources of data collection (in the context of literature review).", freq: "must", marks: [2,6] },
+          { q: "Discuss how critically analyzing primary and secondary sources contributes to developing a well-defined research problem.", freq: "high", marks: [6] },
+          { q: "What are the criteria for identifying / selecting a research problem? What are the various sources to identify it?", freq: "high", marks: [8] },
+          { q: "What is a gap analysis in research? Explain with suitable examples.", freq: "low", marks: [2] }
+        ]
+      },
+      {
+        unit: 3, title: "Unit 3", sub: "Research Ethics & Integrity",
+        questions: [
+          { q: "Elaborate scientific misconducts in terms of FFP (Falsification, Fabrication, and Plagiarism) with examples.", freq: "must", marks: [7] },
+          { q: "Explain the concept of plagiarism, intellectual honesty, and research integrity.", freq: "must", marks: [6,8] },
+          { q: "What are duplicate, overlapping, and redundant publications, and why are they considered research misconduct?", freq: "high", marks: [7] },
+          { q: "Critically analyze the ethical concerns surrounding automated plagiarism detection tools (e.g., Turnitin), including false positives and data privacy.", freq: "high", marks: [5] },
+          { q: "Write a short note on the nature of moral judgments and reactions. Differentiate descriptive vs. prescriptive moral judgment.", freq: "low", marks: [2,3] },
+          { q: "Explain the importance of maintaining intellectual honesty and ethical responsibility in scientific publication / publication ethics.", freq: "low", marks: [6] }
+        ]
+      },
+      {
+        unit: 4, title: "Unit 4", sub: "Data Collection, Processing & Hypothesis Testing",
+        questions: [
+          { q: "Describe the main steps involved in data processing and analysis (Editing, Coding, Classification, Tabulation).", freq: "must", marks: [4,6] },
+          { q: "Discuss the significance of the null hypothesis in statistical testing. Explain Type I and Type II errors with examples.", freq: "must", marks: [5,6] },
+          { q: "Explain the process of hypothesis testing in detail (with flow diagram).", freq: "high", marks: [5,6] },
+          { q: "Describe the process of data collection, processing, and analysis with suitable examples.", freq: "high", marks: [6] },
+          { q: "Explain the concept of p-value in statistical hypothesis testing and common thresholds to interpret it.", freq: "low", marks: [6] },
+          { q: "A researcher claims average social media time > 3 hrs. Sample mean = 3.5 hrs, SD = 1.2, n = 50, α = 0.05. Test the hypothesis.", freq: "low", marks: [4] }
+        ]
+      },
+      {
+        unit: 5, title: "Unit 5", sub: "Databases, Referencing & Report Writing",
+        questions: [
+          { q: "Analyze the differences between citation databases Web of Science (WoS) and Scopus in terms of coverage and indexing.", freq: "must", marks: [4,5] },
+          { q: "Explain the use of reference management tools like Zotero / Mendeley / EndNote (integration with word processors, bibliography generation).", freq: "must", marks: [5] },
+          { q: "Explain the importance of proper referencing, footnotes, and bibliography in research documentation.", freq: "high", marks: [5,6] },
+          { q: "What are the key sections of a research report and what purpose does each section serve?", freq: "high", marks: [5] },
+          { q: "Explain formulation rules for writing a research report.", freq: "low", marks: [5] },
+          { q: "Discuss various types of research metrics and their significance in academic performance measurement.", freq: "low", marks: [6] }
+        ]
+      }
+    ]
   }
 ];
 
