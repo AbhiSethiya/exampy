@@ -2,6 +2,18 @@
 let activeSubjectId = subjectsData[0].id;
 let activeUnit = "all";
 let searchQuery = "";
+let sortBy = "default";
+let filterFavorites = false;
+let filterMastered = false;
+
+// Persistent state
+let bookmarks = JSON.parse(localStorage.getItem("bookmarks") || "[]");
+let mastered = JSON.parse(localStorage.getItem("mastered") || "[]");
+
+function saveState() {
+  localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+  localStorage.setItem("mastered", JSON.stringify(mastered));
+}
 
 // DOM Elements
 const tabsContainer = document.getElementById("subject-tabs");
@@ -12,6 +24,34 @@ const legendContainer = document.getElementById("legend-container");
 
 // Initialize Application
 function init() {
+  // Handle URL Hash
+  if (window.location.hash) {
+    const hashParts = window.location.hash.substring(1).split('-');
+    if (hashParts.length >= 1 && subjectsData.find(s => s.id === hashParts[0])) {
+      activeSubjectId = hashParts[0];
+      activeUnit = hashParts.length >= 2 ? (parseInt(hashParts[1]) || "all") : "all";
+    }
+  }
+
+  // Setup control listeners
+  document.getElementById("sort-select").addEventListener("change", (e) => {
+    sortBy = e.target.value;
+    renderContent();
+  });
+  
+  document.getElementById("filter-favorites").addEventListener("change", (e) => {
+    filterFavorites = e.target.checked;
+    renderContent();
+  });
+  
+  document.getElementById("filter-mastered").addEventListener("change", (e) => {
+    filterMastered = e.target.checked;
+    renderContent();
+  });
+
+  document.getElementById("print-btn").addEventListener("click", () => {
+    window.print();
+  });
   renderTabs();
   renderLegend();
   renderUnitFilters();
@@ -77,6 +117,7 @@ function renderTabs() {
       activeUnit = "all"; // Reset unit filter on subject change
       searchQuery = ""; // Reset search
       searchInput.value = "";
+      window.location.hash = activeSubjectId;
       
       updateBackground(subject.id);
       
@@ -114,7 +155,12 @@ function renderUnitFilters() {
   allBtn.className = `unit-btn ${activeUnit === "all" ? "active" : ""}`;
   allBtn.textContent = "All Units";
   if(activeUnit === "all") allBtn.style.background = activeSubject.theme.primary;
-  allBtn.addEventListener("click", () => { activeUnit = "all"; renderUnitFilters(); renderContent(); });
+  allBtn.addEventListener("click", () => { 
+    activeUnit = "all"; 
+    window.location.hash = activeSubjectId;
+    renderUnitFilters(); 
+    renderContent(); 
+  });
   unitFiltersContainer.appendChild(allBtn);
 
   // Individual Unit Buttons
@@ -126,6 +172,7 @@ function renderUnitFilters() {
     
     btn.addEventListener("click", () => {
       activeUnit = u.unit;
+      window.location.hash = `${activeSubjectId}-${activeUnit}`;
       renderUnitFilters();
       renderContent();
     });
@@ -144,10 +191,33 @@ function renderContent() {
     // Filter by selected unit
     if (activeUnit !== "all" && activeUnit !== unitObj.unit) return;
 
-    // Filter questions by search query
-    const filteredQuestions = unitObj.questions.filter(q => 
-      q.q.toLowerCase().includes(searchQuery)
-    );
+    // Filter questions by search query and checkboxes
+    let filteredQuestions = unitObj.questions.filter(q => {
+      const qId = `${activeSubjectId}-${unitObj.unit}-${btoa(unescape(encodeURIComponent(q.q))).substring(0, 10)}`;
+      q._id = qId; // Attach id for rendering
+      
+      const matchesSearch = q.q.toLowerCase().includes(searchQuery);
+      const isFavorite = bookmarks.includes(qId);
+      const isMastered = mastered.includes(qId);
+      
+      if (!matchesSearch) return false;
+      if (filterFavorites && !isFavorite) return false;
+      if (filterMastered && isMastered) return false;
+      
+      return true;
+    });
+
+    // Apply sorting
+    if (sortBy === "freq") {
+      const freqOrder = { "must": 4, "high": 3, "med": 2, "low": 1 };
+      filteredQuestions.sort((a, b) => freqOrder[b.freq] - freqOrder[a.freq]);
+    } else if (sortBy === "marks") {
+      filteredQuestions.sort((a, b) => {
+        const maxA = a.marks ? Math.max(...a.marks) : 0;
+        const maxB = b.marks ? Math.max(...b.marks) : 0;
+        return maxB - maxA;
+      });
+    }
 
     if (filteredQuestions.length === 0) return;
     totalQuestionsRendered += filteredQuestions.length;
@@ -191,22 +261,65 @@ function renderContent() {
         marksHtml = `<span class="badge badge-marks">${uniqueMarks.join(', ')}m</span>`;
       }
 
+      const qId = q._id;
+      const isFav = bookmarks.includes(qId);
+      const isDone = mastered.includes(qId);
+
       item.innerHTML = `
-        <div class="q-num">${qIndex + 1}.</div>
-        <div class="q-text">
+        <input type="checkbox" class="master-checkbox" data-id="${qId}" ${isDone ? "checked" : ""} title="Mark as mastered" style="margin-top: 4px; cursor: pointer; transform: scale(1.2);">
+        <div class="q-num" style="${isDone ? 'opacity: 0.5;' : ''}">${qIndex + 1}.</div>
+        <div class="q-text" style="${isDone ? 'opacity: 0.5; text-decoration: line-through;' : ''}">
           <a href="https://www.google.com/search?q=${encodeURIComponent(q.q)}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; cursor: pointer;" title="Search this question on Google">
             ${q.q}
           </a>
         </div>
         <div class="q-meta">
-          <span class="badge" style="background:${badgeData.bg};color:${badgeData.color}">
-            ${badgeData.label}
-          </span>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <button class="fav-btn" data-id="${qId}" style="background: none; border: none; cursor: pointer; font-size: 1.3rem; opacity: ${isFav ? 1 : 0.3}; transition: opacity 0.2s;" title="Bookmark this question">
+              ${isFav ? '⭐' : '☆'}
+            </button>
+            <span class="badge" style="background:${badgeData.bg};color:${badgeData.color}">
+              ${badgeData.label}
+            </span>
+          </div>
           ${marksHtml}
         </div>
       `;
       qList.appendChild(item);
     });
+
+    // Add event listeners for bookmarks and checkboxes (after appending to DOM)
+    setTimeout(() => {
+      const checkboxes = qList.querySelectorAll('.master-checkbox');
+      checkboxes.forEach(cb => {
+        cb.addEventListener('change', (e) => {
+          const id = e.target.dataset.id;
+          if (e.target.checked) {
+            mastered.push(id);
+          } else {
+            const index = mastered.indexOf(id);
+            if (index > -1) mastered.splice(index, 1);
+          }
+          saveState();
+          renderContent(); // re-render to apply strikethrough/filters
+        });
+      });
+
+      const favBtns = qList.querySelectorAll('.fav-btn');
+      favBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = e.currentTarget.dataset.id;
+          if (bookmarks.includes(id)) {
+            const index = bookmarks.indexOf(id);
+            bookmarks.splice(index, 1);
+          } else {
+            bookmarks.push(id);
+          }
+          saveState();
+          renderContent(); // re-render to update icon and filters
+        });
+      });
+    }, 0);
 
     section.appendChild(qList);
     contentArea.appendChild(section);

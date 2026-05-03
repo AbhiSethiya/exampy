@@ -17,9 +17,14 @@
           <h1>Master Exam Bank (ai generated ahh name)</h1>
           <p>Vibe Coded Shii</p>
         </div>
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
-          <span class="icon">🌙</span>
-        </button>
+        <div style="display: flex; gap: 10px;">
+          <button id="print-btn" class="theme-toggle" aria-label="Print Page" title="Print/Save as PDF" style="font-size: 1.2rem; cursor: pointer;">
+            🖨️
+          </button>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+            <span class="icon">🌙</span>
+          </button>
+        </div>
       </div>
     </div>
 
@@ -34,7 +39,24 @@
         <span class="search-icon">🔍</span>
         <input type="text" class="search-input" id="search-input" placeholder="Search questions..." />
       </div>
-      <div class="unit-filters" id="unit-filters">
+
+      <div class="controls-row" style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-top: 1rem;">
+        <select id="sort-select" class="sort-select" style="padding: 0.5rem; border-radius: 8px; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-color); cursor: pointer;">
+          <option value="default">Sort: Default</option>
+          <option value="freq">Sort: Importance</option>
+          <option value="marks">Sort: Highest Marks</option>
+        </select>
+
+        <label style="display: flex; align-items: center; gap: 0.3rem; cursor: pointer; font-size: 0.9rem;">
+          <input type="checkbox" id="filter-favorites"> <span style="font-size:1.1rem">⭐</span> Favorites Only
+        </label>
+        
+        <label style="display: flex; align-items: center; gap: 0.3rem; cursor: pointer; font-size: 0.9rem;">
+          <input type="checkbox" id="filter-mastered"> <span style="font-size:1.1rem">❌</span> Hide Mastered
+        </label>
+      </div>
+
+      <div class="unit-filters" id="unit-filters" style="margin-top: 1rem;">
         <!-- Unit filters injected by JS -->
       </div>
     </div>
