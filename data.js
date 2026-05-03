@@ -69,45 +69,63 @@ const subjectsData = [
     theme: { primary: "#0F6E56", bg: "#E1F5EE20" },
     units: [
       {
-        unit: 1, title: "Unit I", sub: "Agile basics · Agile Manifesto · Agile vs Waterfall",
+        unit: 1, title: "Unit 1", sub: "Agile Fundamentals",
         questions: [
-          { q: "What are agile methods? What are the principles behind the Agile Manifesto?", freq: "must", marks: [6] },
-          { q: "What are the important parts of an agile process?", freq: "must", marks: [4] },
-          { q: "Differentiate between the Agile software development model and the Waterfall model.", freq: "must", marks: [6] },
-          { q: "What is the working principle of Agile? What value is provided by Agile? Discuss.", freq: "must", marks: [7] },
-          { q: "Agile software development is based on incremental and iterative development — explain.", freq: "high", marks: [3] },
-          { q: "When should we not use Agile? Write major challenges with agile project management.", freq: "high", marks: [5] },
+          { q: "What are Agile methods and the principles behind the Agile Manifesto? (4 values + 12 principles — explain at least 4 principles for marks.)", freq: "must", marks: [5,6] },
+          { q: "Define Agile methodology. Why is Agile used? (Iterative & incremental approach, customer collaboration, benefits.)", freq: "must", marks: [2,5] },
+          { q: "Mention at least 5 challenges involved in developing Agile software.", freq: "must", marks: [3,5] },
+          { q: "Explain the benefits of Agile for the development team and customers. / Enlist benefits of Agile over Waterfall development.", freq: "must", marks: [5] },
+          { q: "How is Agile methodology different from traditional (Waterfall) methodology? (Differentiate with at least 6 differences.)", freq: "high", marks: [6] },
+          { q: "What is the Lean approach? How does it work (7 principles)? How does it enhance Agile methodologies?", freq: "high", marks: [5,8] },
+          { q: "What are the core principles of Agile related to customer satisfaction and quality?", freq: "low", marks: [5] }
         ]
       },
       {
-        unit: 2, title: "Unit II", sub: "Scrum · Sprints · Product Backlog · Roles",
+        unit: 2, title: "Unit 2", sub: "Scrum & Extreme Programming (XP)",
         questions: [
-          { q: "How many phases are there in Scrum? Explain Scrum framework — phases, events, roles.", freq: "must", marks: [3,7] },
-          { q: "What is the purpose of sprint retrospective in Scrum? Also explain sprint planning.", freq: "must", marks: [7] },
-          { q: "How do you write a product vision in Scrum?", freq: "must", marks: [3] },
-          { q: "What are essential qualities to have as a Scrum Master?", freq: "high", marks: [5] },
-          { q: "What are various advanced Scrum applications? Explain each.", freq: "high", marks: [5] },
-          { q: "Product backlog should be ordered on the basis of value — explain.", freq: "med", marks: [3] },
-          { q: "In Scrum, when is a Sprint Over? (when time box expires)", freq: "med", marks: [1] },
+          { q: "Discuss the roles typically found in an Agile / Scrum team (Product Owner, Scrum Master, Dev Team). How do they differ from traditional project structures?", freq: "must", marks: [5,8] },
+          { q: "What are the core practices of XP (Extreme Programming)? How do they promote rapid development and continuous improvement?", freq: "must", marks: [6,8] },
+          { q: "What is pair programming? What are its benefits?", freq: "must", marks: [4] },
+          { q: "Explain XP project lifecycle. Also explain the controversies in XP.", freq: "high", marks: [6] },
+          { q: "Compare Lean and Scrum. (Focus, timeline, roles, meetings, change handling.)", freq: "high", marks: [2,5] },
+          { q: "What is the purpose of Sprint Retrospective in Scrum? Also explain Sprint Planning.", freq: "high", marks: [7] },
+          { q: "Describe various attributes a development team should embrace to change team philosophy (Self-organizing, cross-functional, T-shaped skills, collective ownership, transparency).", freq: "high", marks: [8] },
+          { q: "What are the various advanced Scrum applications? (Scrum of Scrums, LeSS, SAFe, Nexus, Distributed Scrum.)", freq: "low", marks: [5] }
         ]
       },
       {
-        unit: 3, title: "Unit III", sub: "XP · Lean · Roles in Agile",
+        unit: 3, title: "Unit 3", sub: "Planning, User Stories & Roadmap",
         questions: [
-          { q: "What is meant by Lean approach? How does it work?", freq: "must", marks: [5] },
-          { q: "Explain various roles in the agile process. How are these roles different from traditional roles?", freq: "must", marks: [5] },
-          { q: "Explain Extreme Programming (XP) — four framework activities: planning, design, coding, testing.", freq: "high", marks: [3,5] },
-          { q: "Which of the following is not an agile method? (XP, 4GT, AUP) — explain agile methods.", freq: "med", marks: [3] },
+          { q: "What is meant by User Stories? How are they used? How do they differ from traditional software requirements? Give a suitable example (As a [Role], I want [Action], so that [Benefit]).", freq: "must", marks: [6,7] },
+          { q: "What is a Burndown Chart? How is it used in an Agile project? What does it show?", freq: "must", marks: [3,6] },
+          { q: "Define Sprints and Product Backlog. (Sprint = time-boxed iteration; Product Backlog = master ordered list managed by Product Owner.)", freq: "must", marks: [2,4] },
+          { q: "What is a Product Roadmap? How does it align stakeholders? What are common challenges in creating and maintaining one?", freq: "high", marks: [4,7] },
+          { q: "What is the purpose of Sprint Planning? What factors should the team consider when estimating effort for each sprint backlog item? (Complexity, uncertainty, volume, dependencies.)", freq: "high", marks: [7] },
+          { q: "Define Theme, Feature, and User Stories (the hierarchy: Theme → Epic → Feature → User Story).", freq: "high", marks: [3] },
+          { q: "How do you write a Product Vision in Scrum? (Moore's Template: FOR / WHO / THE / THAT / UNLIKE / OUR PRODUCT.)", freq: "low", marks: [3] },
+          { q: "Define Sprint Backlog and describe activities performed in a Sprint Planning meeting.", freq: "low", marks: [6] }
         ]
       },
       {
-        unit: 4, title: "Unit IV", sub: "Agile Metrics · Risk Management · Project Management Tools",
+        unit: 4, title: "Unit 4", sub: "Risk, Cost & Procurement in Agile",
         questions: [
-          { q: "What are the most critical agile metrics? List and explain at least 4.", freq: "must", marks: [4] },
-          { q: "List agile project management tools and their roles in project planning.", freq: "must", marks: [6] },
-          { q: "Explain risk management in agile — risk identification, monitoring, mitigation.", freq: "must", marks: [6] },
-          { q: "Explain tools used for agile project management.", freq: "high", marks: [5] },
-          { q: "Which process is concerned with analysing costs and benefits of proposed changes? (Change management)", freq: "med", marks: [1] },
+          { q: "Name some common risks in Agile projects. How does Agile's emphasis on collaboration help mitigate risk? (Scope creep, lack of documentation, burnout, customer unavailability, technical debt.)", freq: "must", marks: [6] },
+          { q: "Explain Procurement Management in Agile in detail. (Collaborative contracting, fixed price per iteration, shared risk, multi-stage tendering — Agile vs Traditional procurement.)", freq: "must", marks: [4] },
+          { q: "How are budgets managed in Agile projects? How does Agile handle changes in scope and their impact on cost? (Fixed time & cost, variable scope; burn rate; trading features.)", freq: "high", marks: [6] },
+          { q: "Explain Risk Management in Agile. (Risk monitoring, risk planning, risk analysis, risk identification.)", freq: "high", marks: [6] },
+          { q: "How can you create an environment that supports Agile practices? (Collocation, information radiators, psychological safety, servant leadership.)", freq: "low", marks: [8] }
+        ]
+      },
+      {
+        unit: 5, title: "Unit 5", sub: "Agile Tools, Metrics & Project Management",
+        questions: [
+          { q: "What are the most critical Agile metrics? List Agile project management tools and their roles in project planning. (Velocity, burndown, cycle time, lead time — tools like Jira, Trello, etc.)", freq: "must", marks: [4,6] },
+          { q: "What are the essential qualities / responsibilities of a Scrum Master? How does the Scrum Master handle conflict within the development team?", freq: "must", marks: [5] },
+          { q: "When should we NOT use Agile? Write major challenges with Agile project management.", freq: "high", marks: [5] },
+          { q: "What are the key benefits and key resources for Agile project management?", freq: "high", marks: [5] },
+          { q: "What strategies can an Agile project manager employ to act as a change agent and drive Agile adoption within an organization?", freq: "high", marks: [5] },
+          { q: "Define Velocity of Scrum team. How is it calculated? How does Velocity help in release planning?", freq: "low", marks: [4] },
+          { q: "Differentiate Scrum vs Kanban. What are the key benefits of both?", freq: "low", marks: [5] }
         ]
       }
     ]
