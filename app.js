@@ -186,7 +186,11 @@ function renderContent() {
 
       item.innerHTML = `
         <div class="q-num">${qIndex + 1}.</div>
-        <div class="q-text">${q.q}</div>
+        <div class="q-text">
+          <a href="https://www.google.com/search?q=${encodeURIComponent(q.q)}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; cursor: pointer;" title="Search this question on Google">
+            ${q.q}
+          </a>
+        </div>
         <div class="q-meta">
           <span class="badge" style="background:${badgeData.bg};color:${badgeData.color}">
             ${badgeData.label}
