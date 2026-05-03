@@ -5,64 +5,60 @@ const subjectsData = [
     theme: { primary: "#D85A30", bg: "#FAECE720" },
     units: [
       {
-        unit: 1, title: "Unit I", sub: "Complexity · Asymptotic Notations · Recurrences · Sorting",
+        unit: 1, title: "Unit 1", sub: "Algorithm Analysis & Complexity",
         questions: [
-          { q: "Explain asymptotic notations — Big-O, Big-Ω, Big-Θ. What is the upper/lower bound of f(n)?", freq: "must", marks: [4,6] },
-          { q: "Solve recurrence relations using Master's Theorem (e.g. T(n)=2T(n/2)+n², T(n)=3T(n/3)+√n, T(n)=4T(n/2)+logn).", freq: "must", marks: [6] },
-          { q: "Explain space and time complexity of algorithms.", freq: "must", marks: [4,6] },
-          { q: "Sort elements using Selection Sort. Write best, worst, average case complexity.", freq: "must", marks: [6] },
-          { q: "Write algorithm for Bubble Sort and analyse its time complexity (best and worst case).", freq: "must", marks: [4,6] },
-          { q: "Sort elements using Heap Sort (Max Heap) — step-by-step with given data.", freq: "must", marks: [7] },
-          { q: "Sort elements using Quick Sort and Merge Sort. Analyse their complexities. Justify Quick Sort's O(n²) worst case.", freq: "must", marks: [8,4] },
-          { q: "Explain Strassen's Matrix Multiplication — how it improves on simple multiplication, complexity analysis.", freq: "must", marks: [6,7,8] },
-          { q: "Write recursive binary search algorithm. Analyse its complexity.", freq: "high", marks: [6] },
-          { q: "Explain max heap and min heap with example.", freq: "high", marks: [4] },
-          { q: "What is the significance of Divide and Conquer strategy? Explain with examples.", freq: "high", marks: [2,4] },
-          { q: "Explain Bucket Sort vs Radix Sort — implementation, efficiency, worst case scenario.", freq: "med", marks: [6] },
+          { q: "Solve recurrence relations using Master's Theorem / substitution / tree method (multiple relations given — e.g. T(n)=2T(n/2)+√n, T(n)=4T(n/2)+logn, T(n)=3T(n/3)+n).", freq: "must", marks: [6] },
+          { q: "Explain space and time complexity. What are the various asymptotic notations (Big-O, Ω, Θ)? Explain with examples.", freq: "must", marks: [4,6] },
+          { q: "Write algorithm for Bubble Sort / Selection Sort and analyse its best, worst, and average case complexity.", freq: "must", marks: [4,6] },
+          { q: "Sort given elements using Selection Sort in ascending order. Also write best, worst, and average case complexity.", freq: "high", marks: [6] },
+          { q: "Justify why Quick Sort has worst-case time complexity O(n²). Explain with a suitable example (already-sorted/reverse-sorted input).", freq: "high", marks: [4] },
+          { q: "Explain Bucket Sort vs Radix Sort in terms of implementation and efficiency. Demonstrate a worst-case scenario for Bucket Sort.", freq: "low", marks: [6] }
         ]
       },
       {
-        unit: 2, title: "Unit II", sub: "Greedy · Knapsack · MST · Huffman · Job Sequencing",
+        unit: 2, title: "Unit 2", sub: "Divide and Conquer",
         questions: [
-          { q: "Solve the Fractional Knapsack problem using Greedy strategy — find maximum profit (given weights and values).", freq: "must", marks: [6,7] },
-          { q: "Differentiate Prim's and Kruskal's algorithms for finding Minimum Spanning Tree (MST). Apply to a graph.", freq: "must", marks: [3,4] },
-          { q: "Write a note on Minimum Spanning Tree.", freq: "must", marks: [3] },
-          { q: "Construct Huffman tree for given characters and frequencies. Determine Huffman codes. Calculate total bits.", freq: "must", marks: [7] },
-          { q: "Solve Job Sequencing with Deadlines — find maximum profit sequence using Greedy approach.", freq: "must", marks: [6,7] },
-          { q: "Find Optimal Merge Pattern for given file lengths (using min-heap).", freq: "high", marks: [4] },
-          { q: "Apply Dijkstra's Algorithm — find shortest path from source to all vertices, show order of selected nodes.", freq: "high", marks: [6] },
-          { q: "Define Greedy strategy. Differentiate between Optimal and Feasible solution.", freq: "high", marks: [3,4] },
+          { q: "Explain Strassen's Matrix Multiplication. How is it better than normal 2×2 matrix multiplication in terms of complexity? Analyse complexity.", freq: "must", marks: [6,8] },
+          { q: "Sort given elements using Quick Sort and / or Merge Sort. Analyse complexity.", freq: "must", marks: [8] },
+          { q: "Write recursive Binary Search algorithm. Also analyse its complexity (best, worst, average).", freq: "must", marks: [6] },
+          { q: "Explain the concept of Max Heap and Min Heap with example.", freq: "high", marks: [4] },
+          { q: "Sort given elements using Heap Sort (Max Heap). Show steps.", freq: "high", marks: [7] },
+          { q: "What is the significance of Divide and Conquer strategy?", freq: "low", marks: [2] }
         ]
       },
       {
-        unit: 3, title: "Unit III", sub: "Dynamic Programming · LCS · 0/1 Knapsack · Multistage",
+        unit: 3, title: "Unit 3", sub: "Greedy Method",
         questions: [
-          { q: "What is Dynamic Programming? Explain principle of optimality. Differentiate from Greedy method.", freq: "must", marks: [4] },
-          { q: "Solve 0/1 Knapsack problem using Dynamic Programming — DP table, optimal selection.", freq: "must", marks: [6,7] },
-          { q: "Find Longest Common Subsequence (LCS) of two given strings using DP.", freq: "must", marks: [6] },
-          { q: "Find shortest path in a Multistage Graph from S to T using forward/backward approach.", freq: "must", marks: [6] },
-          { q: "Explain reliability design — three stage systems with device type, cost, reliability constraints.", freq: "high", marks: [6] },
-          { q: "Using Floyd's Algorithm, find all-pair shortest path for a given graph.", freq: "high", marks: [6] },
-          { q: "What are benefits of Dynamic Programming? Properties: optimal substructure & overlapping subproblems.", freq: "high", marks: [4] },
+          { q: "Solve Fractional Knapsack problem using Greedy Strategy (numerical). Find maximum profit. (Capacity=100, weights & values given.)", freq: "must", marks: [6,7] },
+          { q: "Huffman Coding: Build Huffman tree and find Huffman codes for given characters and frequencies.", freq: "must", marks: [6,7] },
+          { q: "Differentiate between Prim's and Kruskal's algorithms for Minimum Spanning Tree (MST). Apply one on a given graph.", freq: "must", marks: [4,6] },
+          { q: "Apply Dijkstra's Algorithm on a given digraph. Find shortest path from source to all vertices. Show table of selected nodes and distances.", freq: "high", marks: [6] },
+          { q: "Write basic algorithm for Greedy technique. Define Greedy strategy. Differentiate between Optimal and Feasible solution.", freq: "high", marks: [3,4] },
+          { q: "Job Sequencing with deadlines: Find maximum profit sequence for given jobs (profit and deadline table given).", freq: "high", marks: [6] },
+          { q: "Find Optimal Merge Pattern for given set of files (e.g. 7 files with lengths 12, 9, 3, 11, 15, 20, 13).", freq: "low", marks: [4] }
         ]
       },
       {
-        unit: 4, title: "Unit IV", sub: "Backtracking · Branch & Bound · N-Queens · Graph Coloring",
+        unit: 4, title: "Unit 4", sub: "Dynamic Programming",
         questions: [
-          { q: "Explain N-Queens problem — backtracking approach with example.", freq: "must", marks: [5] },
-          { q: "Explain Graph Coloring using Backtracking with example.", freq: "must", marks: [5] },
-          { q: "Differentiate Backtracking and Branch & Bound approaches with suitable examples.", freq: "must", marks: [5] },
-          { q: "Explain Sum of Subset problem using Backtracking approach.", freq: "high", marks: [5] },
-          { q: "Solve TSP (Travelling Salesman Problem) using Branch and Bound / reduction method.", freq: "high", marks: [5] },
-          { q: "Solve 0/1 Knapsack using FIFO Branch and Bound.", freq: "med", marks: [6] },
-          { q: "What is Hamiltonian cycle? Define with example.", freq: "med", marks: [5] },
+          { q: "Solve 0/1 Knapsack problem using Dynamic Programming (numerical with n=4 or similar, weights and profits given).", freq: "must", marks: [6,7] },
+          { q: "Define Multistage Graph. Find shortest path from S to T using Forward approach (same graph appears in 3 papers).", freq: "must", marks: [6] },
+          { q: "What is Dynamic Programming? Explain the Principle of Optimality. Write any two benefits. Differentiate DP vs Greedy method.", freq: "must", marks: [4] },
+          { q: "Find Longest Common Subsequence (LCS) of two given strings using Dynamic Programming (X=\"ACDBE\", Y=\"ABCDE\" or similar).", freq: "high", marks: [6] },
+          { q: "Explain Reliability Design / three-stage system using Dynamic Programming (given device costs and reliabilities).", freq: "high", marks: [6] },
+          { q: "Using Floyd's Algorithm, find all-pair shortest path for a given graph.", freq: "low", marks: [6] }
         ]
       },
       {
-        unit: 5, title: "Unit V", sub: "P, NP, NP-Complete · NP-Hard",
+        unit: 5, title: "Unit 5", sub: "Backtracking, Branch & Bound, NP",
         questions: [
-          { q: "Explain P, NP, NP-Complete, and NP-Hard problems with suitable examples.", freq: "must", marks: [5] },
-          { q: "What is NP-Hard and NP-Completeness? Explain with example.", freq: "must", marks: [5] },
+          { q: "Elaborate how backtracking technique can be used to solve the N-Queens problem. Explain with an example.", freq: "must", marks: [5] },
+          { q: "Explain P, NP, NP-Complete, and NP-Hard problems with examples. Define the group NP-Complete (problems that are both NP and NP-Hard).", freq: "must", marks: [5] },
+          { q: "Explain Graph Coloring using Backtracking with the help of an example.", freq: "high", marks: [5] },
+          { q: "Explain the method of reduction / Branch and Bound to solve the Travelling Salesman Problem (TSP).", freq: "high", marks: [5] },
+          { q: "Explain the difference between Backtracking and Branch & Bound approaches with suitable examples.", freq: "high", marks: [5] },
+          { q: "Explain Sum of Subsets problem and how Backtracking helps solve it.", freq: "low", marks: [5] },
+          { q: "Define Hamiltonian cycle / circuit. Explain with an example.", freq: "low", marks: [5] }
         ]
       }
     ]
