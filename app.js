@@ -461,9 +461,7 @@ function renderContent() {
             // Fallback: silent fail, still opens ChatGPT
           });
 
-          // Open ChatGPT with the prompt automatically filled and searched
-          const url = `https://chatgpt.com/?q=${encodeURIComponent(prompt)}`;
-          window.open(url, '_blank');
+
         });
       });
 
