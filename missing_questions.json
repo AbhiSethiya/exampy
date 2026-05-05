@@ -1,0 +1,1394 @@
+[
+  {
+    "qid": "daa-4-su7pny",
+    "subj": "daa",
+    "unit": 4,
+    "q": "Solve 0/1 Knapsack problem using Dynamic Programming (numerical with n=4 or similar, weights and profits given)."
+  },
+  {
+    "qid": "daa-4-pfxohv",
+    "subj": "daa",
+    "unit": 4,
+    "q": "Define Multistage Graph. Find shortest path from S to T using Forward approach (same graph appears in 3 papers)."
+  },
+  {
+    "qid": "daa-4-eba9od",
+    "subj": "daa",
+    "unit": 4,
+    "q": "What is Dynamic Programming? Explain the Principle of Optimality. Write any two benefits. Differentiate DP vs Greedy method."
+  },
+  {
+    "qid": "daa-4-au8604",
+    "subj": "daa",
+    "unit": 4,
+    "q": "Find Longest Common Subsequence (LCS) of two given strings using Dynamic Programming (X=\"ACDBE\", Y=\"ABCDE\" or similar)."
+  },
+  {
+    "qid": "daa-4-ootldn",
+    "subj": "daa",
+    "unit": 4,
+    "q": "Explain Reliability Design / three-stage system using Dynamic Programming (given device costs and reliabilities)."
+  },
+  {
+    "qid": "daa-4-1x1tug",
+    "subj": "daa",
+    "unit": 4,
+    "q": "Using Floyd's Algorithm, find all-pair shortest path for a given graph."
+  },
+  {
+    "qid": "daa-5-dvwdg5",
+    "subj": "daa",
+    "unit": 5,
+    "q": "Elaborate how backtracking technique can be used to solve the N-Queens problem. Explain with an example."
+  },
+  {
+    "qid": "daa-5-yngyps",
+    "subj": "daa",
+    "unit": 5,
+    "q": "Explain P, NP, NP-Complete, and NP-Hard problems with examples. Define the group NP-Complete (problems that are both NP and NP-Hard)."
+  },
+  {
+    "qid": "daa-5-aqu9bw",
+    "subj": "daa",
+    "unit": 5,
+    "q": "Explain Graph Coloring using Backtracking with the help of an example."
+  },
+  {
+    "qid": "daa-5-ny5zdv",
+    "subj": "daa",
+    "unit": 5,
+    "q": "Explain the method of reduction / Branch and Bound to solve the Travelling Salesman Problem (TSP)."
+  },
+  {
+    "qid": "daa-5-d201ta",
+    "subj": "daa",
+    "unit": 5,
+    "q": "Explain the difference between Backtracking and Branch & Bound approaches with suitable examples."
+  },
+  {
+    "qid": "daa-5-2pl196",
+    "subj": "daa",
+    "unit": 5,
+    "q": "Explain Sum of Subsets problem and how Backtracking helps solve it."
+  },
+  {
+    "qid": "daa-5-l7by6t",
+    "subj": "daa",
+    "unit": 5,
+    "q": "Define Hamiltonian cycle / circuit. Explain with an example."
+  },
+  {
+    "qid": "agile-1-q3h4mk",
+    "subj": "agile",
+    "unit": 1,
+    "q": "What are Agile methods and the principles behind the Agile Manifesto? (4 values + 12 principles — explain at least 4 principles for marks.)"
+  },
+  {
+    "qid": "agile-1-4799td",
+    "subj": "agile",
+    "unit": 1,
+    "q": "Define Agile methodology. Why is Agile used? (Iterative & incremental approach, customer collaboration, benefits.)"
+  },
+  {
+    "qid": "agile-1-q6u1b5",
+    "subj": "agile",
+    "unit": 1,
+    "q": "Mention at least 5 challenges involved in developing Agile software."
+  },
+  {
+    "qid": "agile-1-tew3lp",
+    "subj": "agile",
+    "unit": 1,
+    "q": "Explain the benefits of Agile for the development team and customers. / Enlist benefits of Agile over Waterfall development."
+  },
+  {
+    "qid": "agile-1-h3gsih",
+    "subj": "agile",
+    "unit": 1,
+    "q": "How is Agile methodology different from traditional (Waterfall) methodology? (Differentiate with at least 6 differences.)"
+  },
+  {
+    "qid": "agile-1-o06pbf",
+    "subj": "agile",
+    "unit": 1,
+    "q": "What is the Lean approach? How does it work (7 principles)? How does it enhance Agile methodologies?"
+  },
+  {
+    "qid": "agile-1-vrn1mr",
+    "subj": "agile",
+    "unit": 1,
+    "q": "What are the core principles of Agile related to customer satisfaction and quality?"
+  },
+  {
+    "qid": "agile-2-18ahyw",
+    "subj": "agile",
+    "unit": 2,
+    "q": "Discuss the roles typically found in an Agile / Scrum team (Product Owner, Scrum Master, Dev Team). How do they differ from traditional project structures?"
+  },
+  {
+    "qid": "agile-2-a2dsyv",
+    "subj": "agile",
+    "unit": 2,
+    "q": "What are the core practices of XP (Extreme Programming)? How do they promote rapid development and continuous improvement?"
+  },
+  {
+    "qid": "agile-2-yslhjl",
+    "subj": "agile",
+    "unit": 2,
+    "q": "What is pair programming? What are its benefits?"
+  },
+  {
+    "qid": "agile-2-qv9cda",
+    "subj": "agile",
+    "unit": 2,
+    "q": "Explain XP project lifecycle. Also explain the controversies in XP."
+  },
+  {
+    "qid": "agile-2-vxndcg",
+    "subj": "agile",
+    "unit": 2,
+    "q": "Compare Lean and Scrum. (Focus, timeline, roles, meetings, change handling.)"
+  },
+  {
+    "qid": "agile-2-cuzywy",
+    "subj": "agile",
+    "unit": 2,
+    "q": "What is the purpose of Sprint Retrospective in Scrum? Also explain Sprint Planning."
+  },
+  {
+    "qid": "agile-2-3zlhdu",
+    "subj": "agile",
+    "unit": 2,
+    "q": "Describe various attributes a development team should embrace to change team philosophy (Self-organizing, cross-functional, T-shaped skills, collective ownership, transparency)."
+  },
+  {
+    "qid": "agile-2-1jjrr",
+    "subj": "agile",
+    "unit": 2,
+    "q": "What are the various advanced Scrum applications? (Scrum of Scrums, LeSS, SAFe, Nexus, Distributed Scrum.)"
+  },
+  {
+    "qid": "agile-3-ontpah",
+    "subj": "agile",
+    "unit": 3,
+    "q": "What is meant by User Stories? How are they used? How do they differ from traditional software requirements? Give a suitable example (As a [Role], I want [Action], so that [Benefit])."
+  },
+  {
+    "qid": "agile-3-d55ynf",
+    "subj": "agile",
+    "unit": 3,
+    "q": "What is a Burndown Chart? How is it used in an Agile project? What does it show?"
+  },
+  {
+    "qid": "agile-3-phoylv",
+    "subj": "agile",
+    "unit": 3,
+    "q": "Define Sprints and Product Backlog. (Sprint = time-boxed iteration; Product Backlog = master ordered list managed by Product Owner.)"
+  },
+  {
+    "qid": "agile-3-3p6ag0",
+    "subj": "agile",
+    "unit": 3,
+    "q": "What is a Product Roadmap? How does it align stakeholders? What are common challenges in creating and maintaining one?"
+  },
+  {
+    "qid": "agile-3-cp8ts0",
+    "subj": "agile",
+    "unit": 3,
+    "q": "What is the purpose of Sprint Planning? What factors should the team consider when estimating effort for each sprint backlog item? (Complexity, uncertainty, volume, dependencies.)"
+  },
+  {
+    "qid": "agile-3-4yytpy",
+    "subj": "agile",
+    "unit": 3,
+    "q": "Define Theme, Feature, and User Stories (the hierarchy: Theme → Epic → Feature → User Story)."
+  },
+  {
+    "qid": "agile-3-aspart",
+    "subj": "agile",
+    "unit": 3,
+    "q": "How do you write a Product Vision in Scrum? (Moore's Template: FOR / WHO / THE / THAT / UNLIKE / OUR PRODUCT.)"
+  },
+  {
+    "qid": "agile-3-ge8v5r",
+    "subj": "agile",
+    "unit": 3,
+    "q": "Define Sprint Backlog and describe activities performed in a Sprint Planning meeting."
+  },
+  {
+    "qid": "agile-4-7p3p4s",
+    "subj": "agile",
+    "unit": 4,
+    "q": "Name some common risks in Agile projects. How does Agile's emphasis on collaboration help mitigate risk? (Scope creep, lack of documentation, burnout, customer unavailability, technical debt.)"
+  },
+  {
+    "qid": "agile-4-u1jh3i",
+    "subj": "agile",
+    "unit": 4,
+    "q": "Explain Procurement Management in Agile in detail. (Collaborative contracting, fixed price per iteration, shared risk, multi-stage tendering — Agile vs Traditional procurement.)"
+  },
+  {
+    "qid": "agile-4-pk3ck8",
+    "subj": "agile",
+    "unit": 4,
+    "q": "How are budgets managed in Agile projects? How does Agile handle changes in scope and their impact on cost? (Fixed time & cost, variable scope; burn rate; trading features.)"
+  },
+  {
+    "qid": "agile-4-krv7pq",
+    "subj": "agile",
+    "unit": 4,
+    "q": "Explain Risk Management in Agile. (Risk monitoring, risk planning, risk analysis, risk identification.)"
+  },
+  {
+    "qid": "agile-4-3o7jgz",
+    "subj": "agile",
+    "unit": 4,
+    "q": "How can you create an environment that supports Agile practices? (Collocation, information radiators, psychological safety, servant leadership.)"
+  },
+  {
+    "qid": "agile-5-25vg7w",
+    "subj": "agile",
+    "unit": 5,
+    "q": "What are the most critical Agile metrics? List Agile project management tools and their roles in project planning. (Velocity, burndown, cycle time, lead time — tools like Jira, Trello, etc.)"
+  },
+  {
+    "qid": "agile-5-bw2a9x",
+    "subj": "agile",
+    "unit": 5,
+    "q": "What are the essential qualities / responsibilities of a Scrum Master? How does the Scrum Master handle conflict within the development team?"
+  },
+  {
+    "qid": "agile-5-ojxdxe",
+    "subj": "agile",
+    "unit": 5,
+    "q": "When should we NOT use Agile? Write major challenges with Agile project management."
+  },
+  {
+    "qid": "agile-5-mfqlmf",
+    "subj": "agile",
+    "unit": 5,
+    "q": "What are the key benefits and key resources for Agile project management?"
+  },
+  {
+    "qid": "agile-5-d4mc3a",
+    "subj": "agile",
+    "unit": 5,
+    "q": "What strategies can an Agile project manager employ to act as a change agent and drive Agile adoption within an organization?"
+  },
+  {
+    "qid": "agile-5-mlzuc3",
+    "subj": "agile",
+    "unit": 5,
+    "q": "Define Velocity of Scrum team. How is it calculated? How does Velocity help in release planning?"
+  },
+  {
+    "qid": "agile-5-4wqsqx",
+    "subj": "agile",
+    "unit": 5,
+    "q": "Differentiate Scrum vs Kanban. What are the key benefits of both?"
+  },
+  {
+    "qid": "cd-1-bcpux8",
+    "subj": "cd",
+    "unit": 1,
+    "q": "Explain the phases of a compiler with a neat block diagram."
+  },
+  {
+    "qid": "cd-1-b5rw6e",
+    "subj": "cd",
+    "unit": 1,
+    "q": "Explain the role of lexical analyzer — what it does, input/output, tokens, lexemes."
+  },
+  {
+    "qid": "cd-1-aj10qp",
+    "subj": "cd",
+    "unit": 1,
+    "q": "What are the different types of compilers? Explain with examples (native, two-pass, cross, bootstrap)."
+  },
+  {
+    "qid": "cd-1-xm5w2n",
+    "subj": "cd",
+    "unit": 1,
+    "q": "What is the role of the symbol table in compiler design? Explain its operations and implementations."
+  },
+  {
+    "qid": "cd-1-69trdn",
+    "subj": "cd",
+    "unit": 1,
+    "q": "What is the role of error handler in compiler design?"
+  },
+  {
+    "qid": "cd-1-ra2mkm",
+    "subj": "cd",
+    "unit": 1,
+    "q": "Explain the concept of input buffering in lexical analysis — one buffer and two buffer scheme."
+  },
+  {
+    "qid": "cd-1-y30yk8",
+    "subj": "cd",
+    "unit": 1,
+    "q": "Define pass structure of a compiler. Explain its types."
+  },
+  {
+    "qid": "cd-1-vmc95k",
+    "subj": "cd",
+    "unit": 1,
+    "q": "What is the advantage of dividing compiler design into front-end and back-end?"
+  },
+  {
+    "qid": "cd-1-kbzy0y",
+    "subj": "cd",
+    "unit": 1,
+    "q": "Define translator, interpreter, and assembler. Differentiate compiler vs interpreter."
+  },
+  {
+    "qid": "cd-1-b2x6q8",
+    "subj": "cd",
+    "unit": 1,
+    "q": "Define cross compiler and bootstrapping with examples."
+  },
+  {
+    "qid": "cd-1-pla2fd",
+    "subj": "cd",
+    "unit": 1,
+    "q": "Find number of tokens in a given C code snippet."
+  },
+  {
+    "qid": "cd-1-595s70",
+    "subj": "cd",
+    "unit": 1,
+    "q": "Explain the role of finite automata (FSA/DFA) in lexical analysis."
+  },
+  {
+    "qid": "cd-2-sc1x4l",
+    "subj": "cd",
+    "unit": 2,
+    "q": "Compute FIRST() and FOLLOW() for a given grammar (e.g. expression grammar E→TE', T→FT', etc.)."
+  },
+  {
+    "qid": "cd-2-bjbnsv",
+    "subj": "cd",
+    "unit": 2,
+    "q": "What is ambiguous grammar? Define with example. Check if a given grammar is ambiguous."
+  },
+  {
+    "qid": "cd-2-p53xpn",
+    "subj": "cd",
+    "unit": 2,
+    "q": "Remove left recursion from a given grammar and calculate FIRST and FOLLOW."
+  },
+  {
+    "qid": "cd-2-c7dbzm",
+    "subj": "cd",
+    "unit": 2,
+    "q": "Do left factoring for a given grammar (e.g. A → aAB / aBc / aAc)."
+  },
+  {
+    "qid": "cd-2-e11mdq",
+    "subj": "cd",
+    "unit": 2,
+    "q": "Construct LL(1) parsing table for a given grammar and check if it is LL(1) or not."
+  },
+  {
+    "qid": "cd-2-51sx1q",
+    "subj": "cd",
+    "unit": 2,
+    "q": "Explain recursive descent parser. How does predictive parsing avoid backtracking?"
+  },
+  {
+    "qid": "cd-2-diulxj",
+    "subj": "cd",
+    "unit": 2,
+    "q": "Differentiate top-down and bottom-up parsing techniques."
+  },
+  {
+    "qid": "cd-2-vu98sw",
+    "subj": "cd",
+    "unit": 2,
+    "q": "What are the problems with top-down parsing?"
+  },
+  {
+    "qid": "cd-2-19v2ec",
+    "subj": "cd",
+    "unit": 2,
+    "q": "Compare predictive parser and shift-reduce parser."
+  },
+  {
+    "qid": "cd-2-346vyf",
+    "subj": "cd",
+    "unit": 2,
+    "q": "What is LL(1) grammar? How is the parsing table constructed? Explain with example."
+  },
+  {
+    "qid": "cd-3-xsmltv",
+    "subj": "cd",
+    "unit": 3,
+    "q": "Construct SLR(1) parsing table for a given grammar. Parse a given string using the table."
+  },
+  {
+    "qid": "cd-3-uz3ngl",
+    "subj": "cd",
+    "unit": 3,
+    "q": "Construct CLR / Canonical LR(1) parsing table for a given grammar."
+  },
+  {
+    "qid": "cd-3-i3ngpm",
+    "subj": "cd",
+    "unit": 3,
+    "q": "Construct LALR(1) parsing table for a given grammar."
+  },
+  {
+    "qid": "cd-3-wde6et",
+    "subj": "cd",
+    "unit": 3,
+    "q": "Define LR(0) grammar and operator grammar. Explain with rules and examples."
+  },
+  {
+    "qid": "cd-3-vwhh4b",
+    "subj": "cd",
+    "unit": 3,
+    "q": "Construct operator precedence parsing table for a given grammar. Discuss its disadvantages."
+  },
+  {
+    "qid": "cd-3-lz4pnm",
+    "subj": "cd",
+    "unit": 3,
+    "q": "Check whether a given grammar is LR(0) and SLR(0) / SLR(1) or not."
+  },
+  {
+    "qid": "cd-3-dt0ds3",
+    "subj": "cd",
+    "unit": 3,
+    "q": "Discuss differences between SLR, Canonical LR (CLR), and LALR parsers."
+  },
+  {
+    "qid": "cd-3-crgi48",
+    "subj": "cd",
+    "unit": 3,
+    "q": "Apply operator precedence parsing for an expression — show stack actions."
+  },
+  {
+    "qid": "cd-3-kdf9a9",
+    "subj": "cd",
+    "unit": 3,
+    "q": "What is shift/reduce conflict? When does it occur?"
+  },
+  {
+    "qid": "cd-4-qxdaf7",
+    "subj": "cd",
+    "unit": 4,
+    "q": "Define Syntax Directed Translation (SDT). Explain S-attributed vs L-attributed SDT with differences."
+  },
+  {
+    "qid": "cd-4-8x912q",
+    "subj": "cd",
+    "unit": 4,
+    "q": "Differentiate synthesized attributes and inherited attributes in SDT with examples."
+  },
+  {
+    "qid": "cd-4-9jnu4f",
+    "subj": "cd",
+    "unit": 4,
+    "q": "Generate Three-Address Code (TAC) for a given expression. Also compute quadruple, triple, and indirect triple."
+  },
+  {
+    "qid": "cd-4-7ly157",
+    "subj": "cd",
+    "unit": 4,
+    "q": "Convert infix expression to postfix using SDT / translation scheme."
+  },
+  {
+    "qid": "cd-4-q5jajz",
+    "subj": "cd",
+    "unit": 4,
+    "q": "Construct syntax tree and generate TAC for a given statement (e.g. A = B + C * D)."
+  },
+  {
+    "qid": "cd-4-4n2gye",
+    "subj": "cd",
+    "unit": 4,
+    "q": "Convert binary number to decimal using a given SDT (annotated parse tree)."
+  },
+  {
+    "qid": "cd-4-m6ys4",
+    "subj": "cd",
+    "unit": 4,
+    "q": "Define three-address code. Write TAC for a while/if-else statement."
+  },
+  {
+    "qid": "cd-4-bk6mb8",
+    "subj": "cd",
+    "unit": 4,
+    "q": "What is syntax directed definition? Explain with example."
+  },
+  {
+    "qid": "cd-4-kwgm6o",
+    "subj": "cd",
+    "unit": 4,
+    "q": "What is postfix notation? Define and illustrate with an expression."
+  },
+  {
+    "qid": "cd-5-xmdscy",
+    "subj": "cd",
+    "unit": 5,
+    "q": "Explain activation record — structure, components, and block diagram."
+  },
+  {
+    "qid": "cd-5-zo8qo",
+    "subj": "cd",
+    "unit": 5,
+    "q": "Explain basic blocks and flow graphs with example. How are basic block boundaries identified?"
+  },
+  {
+    "qid": "cd-5-c9dqxu",
+    "subj": "cd",
+    "unit": 5,
+    "q": "Explain global data flow analysis and how it helps in optimizing programs."
+  },
+  {
+    "qid": "cd-5-7fg8tc",
+    "subj": "cd",
+    "unit": 5,
+    "q": "Explain storage allocation strategies (static, stack, heap)."
+  },
+  {
+    "qid": "cd-5-u0sugt",
+    "subj": "cd",
+    "unit": 5,
+    "q": "Explain loop optimization techniques — loop invariant computation, induction variable, strength reduction."
+  },
+  {
+    "qid": "cd-5-pdm4e7",
+    "subj": "cd",
+    "unit": 5,
+    "q": "Explain activation trees and activation records."
+  },
+  {
+    "qid": "cd-5-ngfem3",
+    "subj": "cd",
+    "unit": 5,
+    "q": "Explain error control and symbol table."
+  },
+  {
+    "qid": "cd-5-s4u5g9",
+    "subj": "cd",
+    "unit": 5,
+    "q": "Find loop-invariant computation for a given code (e.g. for loop with expression)."
+  },
+  {
+    "qid": "cd-5-q7qzgl",
+    "subj": "cd",
+    "unit": 5,
+    "q": "Explain peephole optimization — what it is and what transformations it performs."
+  },
+  {
+    "qid": "cd-5-c8wd08",
+    "subj": "cd",
+    "unit": 5,
+    "q": "Explain constant folding and local optimization techniques."
+  },
+  {
+    "qid": "ml-1-p5usai",
+    "subj": "ml",
+    "unit": 1,
+    "q": "What is Machine Learning? Give an example."
+  },
+  {
+    "qid": "ml-1-wps922",
+    "subj": "ml",
+    "unit": 1,
+    "q": "Explain types of Machine Learning and its applications."
+  },
+  {
+    "qid": "ml-1-4z44up",
+    "subj": "ml",
+    "unit": 1,
+    "q": "What is Linear Regression? Explain with cost function, assumptions, and regression line."
+  },
+  {
+    "qid": "ml-1-2u9bw1",
+    "subj": "ml",
+    "unit": 1,
+    "q": "What is the cost function in Linear Regression? How does it help? How to reduce it?"
+  },
+  {
+    "qid": "ml-1-l07mmp",
+    "subj": "ml",
+    "unit": 1,
+    "q": "Explain Gradient Descent — derivation, role in Linear Regression, stopping point."
+  },
+  {
+    "qid": "ml-1-iazyzo",
+    "subj": "ml",
+    "unit": 1,
+    "q": "Given dataset points, compute the best-fit line using Linear Regression."
+  },
+  {
+    "qid": "ml-1-hn15i5",
+    "subj": "ml",
+    "unit": 1,
+    "q": "What is MSE (Mean Square Error) and how is it used in Linear Regression?"
+  },
+  {
+    "qid": "ml-1-p5wm7y",
+    "subj": "ml",
+    "unit": 1,
+    "q": "What is Logistic Regression? Explain with example. Compare with Linear Regression."
+  },
+  {
+    "qid": "ml-1-4x17q4",
+    "subj": "ml",
+    "unit": 1,
+    "q": "Write a note on types of Logistic Regression."
+  },
+  {
+    "qid": "ml-1-lcz2zj",
+    "subj": "ml",
+    "unit": 1,
+    "q": "In Logistic Regression, what function models probability of a binary outcome?"
+  },
+  {
+    "qid": "ml-1-xpzltd",
+    "subj": "ml",
+    "unit": 1,
+    "q": "What is K-Nearest Neighbour (KNN)? Explain with example. How does value of k affect performance?"
+  },
+  {
+    "qid": "ml-1-fq9z9o",
+    "subj": "ml",
+    "unit": 1,
+    "q": "Write a note on Eager Learning and Lazy Learning."
+  },
+  {
+    "qid": "ml-1-9taibt",
+    "subj": "ml",
+    "unit": 1,
+    "q": "What is supervised learning? Give an example."
+  },
+  {
+    "qid": "ml-1-2c34y8",
+    "subj": "ml",
+    "unit": 1,
+    "q": "What is unsupervised learning? Give an example."
+  },
+  {
+    "qid": "ml-1-dn90r4",
+    "subj": "ml",
+    "unit": 1,
+    "q": "What is Reinforcement Learning? Give an example."
+  },
+  {
+    "qid": "ml-1-lrktb0",
+    "subj": "ml",
+    "unit": 1,
+    "q": "What is Association Rule Mining? Give an example."
+  },
+  {
+    "qid": "ml-1-v0omsg",
+    "subj": "ml",
+    "unit": 1,
+    "q": "What is an outlier?"
+  },
+  {
+    "qid": "ml-1-ffc2zo",
+    "subj": "ml",
+    "unit": 1,
+    "q": "What is residual in regression?"
+  },
+  {
+    "qid": "ml-1-yxlqtg",
+    "subj": "ml",
+    "unit": 1,
+    "q": "What are dependent and independent variables in regression?"
+  },
+  {
+    "qid": "ml-1-i3w5kx",
+    "subj": "ml",
+    "unit": 1,
+    "q": "Explain Machine Learning lifecycle with diagram."
+  },
+  {
+    "qid": "ml-2-3d4qpm",
+    "subj": "ml",
+    "unit": 2,
+    "q": "Explain Decision Tree working with a suitable example."
+  },
+  {
+    "qid": "ml-2-cinpn7",
+    "subj": "ml",
+    "unit": 2,
+    "q": "Explain ID3 algorithm — expected information, information gain, entropy, information needed."
+  },
+  {
+    "qid": "ml-2-8mln1v",
+    "subj": "ml",
+    "unit": 2,
+    "q": "What are advantages and disadvantages of ID3?"
+  },
+  {
+    "qid": "ml-2-w61z2g",
+    "subj": "ml",
+    "unit": 2,
+    "q": "Differentiate Classification and Regression."
+  },
+  {
+    "qid": "ml-2-34kr2o",
+    "subj": "ml",
+    "unit": 2,
+    "q": "Illustrate and explain the classification task with evaluation criteria."
+  },
+  {
+    "qid": "ml-2-4isimi",
+    "subj": "ml",
+    "unit": 2,
+    "q": "Support Vector Machine (SVM) — working, optimization objective, kernel methods."
+  },
+  {
+    "qid": "ml-2-g1fhqq",
+    "subj": "ml",
+    "unit": 2,
+    "q": "Explain how kernel methods improve the performance of SVM."
+  },
+  {
+    "qid": "ml-2-jl3jl6",
+    "subj": "ml",
+    "unit": 2,
+    "q": "What is regularization? How does it help in Machine Learning? Explain its types (L1/L2)."
+  },
+  {
+    "qid": "ml-2-twtkka",
+    "subj": "ml",
+    "unit": 2,
+    "q": "Write a note on overfitting and underfitting. Define with examples."
+  },
+  {
+    "qid": "ml-2-idjtx3",
+    "subj": "ml",
+    "unit": 2,
+    "q": "Explain Naïve Bayes algorithm with example."
+  },
+  {
+    "qid": "ml-2-smf4q9",
+    "subj": "ml",
+    "unit": 2,
+    "q": "Explain Bayesian theorem with example."
+  },
+  {
+    "qid": "ml-2-n13pie",
+    "subj": "ml",
+    "unit": 2,
+    "q": "What are training set and test set?"
+  },
+  {
+    "qid": "ml-2-hwfw2c",
+    "subj": "ml",
+    "unit": 2,
+    "q": "Explain candidate elimination algorithm with example."
+  },
+  {
+    "qid": "ml-2-vmwr30",
+    "subj": "ml",
+    "unit": 2,
+    "q": "Given a dataset, construct a decision tree using ID3 (compute entropy, information gain, build tree)."
+  },
+  {
+    "qid": "ml-3-o6lgw2",
+    "subj": "ml",
+    "unit": 3,
+    "q": "What is clustering? Explain types with examples."
+  },
+  {
+    "qid": "ml-3-xc0m6",
+    "subj": "ml",
+    "unit": 3,
+    "q": "Explain K-Means clustering algorithm with a step-by-step numerical example."
+  },
+  {
+    "qid": "ml-3-5a0yy0",
+    "subj": "ml",
+    "unit": 3,
+    "q": "What are pros and cons of K-Means?"
+  },
+  {
+    "qid": "ml-3-6aid3y",
+    "subj": "ml",
+    "unit": 3,
+    "q": "Perform K-Means clustering on a given dataset (e.g. flower petal/sepal data, height/weight) with K=2."
+  },
+  {
+    "qid": "ml-3-opc0dx",
+    "subj": "ml",
+    "unit": 3,
+    "q": "What is Principal Component Analysis (PCA)? Define and explain its significance."
+  },
+  {
+    "qid": "ml-3-oznc45",
+    "subj": "ml",
+    "unit": 3,
+    "q": "Explain the steps involved in PCA. How are variance and covariance connected to PCA?"
+  },
+  {
+    "qid": "ml-3-4w5bap",
+    "subj": "ml",
+    "unit": 3,
+    "q": "What is dimensional/dimensionality reduction? Explain various approaches."
+  },
+  {
+    "qid": "ml-3-b5k9d2",
+    "subj": "ml",
+    "unit": 3,
+    "q": "Write differences between Linear Discriminant Analysis and PCA."
+  },
+  {
+    "qid": "ml-3-bsmkqu",
+    "subj": "ml",
+    "unit": 3,
+    "q": "Explain matrix factorization with a recommendation system example."
+  },
+  {
+    "qid": "ml-3-5nz4xx",
+    "subj": "ml",
+    "unit": 3,
+    "q": "Explain LU Decomposition with steps and example."
+  },
+  {
+    "qid": "ml-3-m6xxie",
+    "subj": "ml",
+    "unit": 3,
+    "q": "What are desirable properties of a clustering algorithm?"
+  },
+  {
+    "qid": "ml-3-ktlsd4",
+    "subj": "ml",
+    "unit": 3,
+    "q": "Explain the role of matrix completion in Machine Learning."
+  },
+  {
+    "qid": "ml-4-4bklzl",
+    "subj": "ml",
+    "unit": 4,
+    "q": "Define a perceptron. Explain its working with an example."
+  },
+  {
+    "qid": "ml-4-dd6v3c",
+    "subj": "ml",
+    "unit": 4,
+    "q": "Write a note on Artificial Neural Network — architecture, properties, layers, nodes, activation functions."
+  },
+  {
+    "qid": "ml-4-nlkgvz",
+    "subj": "ml",
+    "unit": 4,
+    "q": "What are different network topologies in ANN (feedforward, recurrent)?"
+  },
+  {
+    "qid": "ml-4-iv0vht",
+    "subj": "ml",
+    "unit": 4,
+    "q": "What is a Recurrent Neural Network (RNN)? How does it differ from a feedforward network?"
+  },
+  {
+    "qid": "ml-4-wbixmd",
+    "subj": "ml",
+    "unit": 4,
+    "q": "Explain concepts of backpropagation — chain rule, forward phase, backward phase, with example."
+  },
+  {
+    "qid": "ml-4-80kr9p",
+    "subj": "ml",
+    "unit": 4,
+    "q": "What is Multi-Layer Feedforward Network? Explain architecture and algorithm."
+  },
+  {
+    "qid": "ml-4-66zqhn",
+    "subj": "ml",
+    "unit": 4,
+    "q": "Describe Python ML libraries: Keras and TensorFlow — key features and relationships."
+  },
+  {
+    "qid": "ml-4-t5yxhe",
+    "subj": "ml",
+    "unit": 4,
+    "q": "Write various types of data visualization in Machine Learning."
+  },
+  {
+    "qid": "ml-4-uuzdot",
+    "subj": "ml",
+    "unit": 4,
+    "q": "Explain matplotlib figure with description of all its components."
+  },
+  {
+    "qid": "ml-4-xked73",
+    "subj": "ml",
+    "unit": 4,
+    "q": "Explain various visualization types available for data visualization."
+  },
+  {
+    "qid": "ml-4-cbaod5",
+    "subj": "ml",
+    "unit": 4,
+    "q": "Write applications of data visualization in the real world."
+  },
+  {
+    "qid": "ml-5-sau3q8",
+    "subj": "ml",
+    "unit": 5,
+    "q": "Explain Random Forest — working principle, why it is used in Machine Learning."
+  },
+  {
+    "qid": "ml-5-7cz2hg",
+    "subj": "ml",
+    "unit": 5,
+    "q": "Explain Bagging with example. What are its advantages in improving model performance?"
+  },
+  {
+    "qid": "ml-5-6o73xb",
+    "subj": "ml",
+    "unit": 5,
+    "q": "Explain Boosting (AdaBoost) algorithm with example."
+  },
+  {
+    "qid": "ml-5-7dwhzq",
+    "subj": "ml",
+    "unit": 5,
+    "q": "Differentiate Bagging vs Boosting vs Stacking."
+  },
+  {
+    "qid": "ml-5-crigle",
+    "subj": "ml",
+    "unit": 5,
+    "q": "What are advantages and disadvantages of ensemble methods?"
+  },
+  {
+    "qid": "ml-5-n9ez67",
+    "subj": "ml",
+    "unit": 5,
+    "q": "Write a note on Deep Learning. How does it differ from Machine Learning?"
+  },
+  {
+    "qid": "ml-5-8cqqdn",
+    "subj": "ml",
+    "unit": 5,
+    "q": "Describe key components of a Reinforcement Learning system and how they interact."
+  },
+  {
+    "qid": "ml-5-cfcio0",
+    "subj": "ml",
+    "unit": 5,
+    "q": "Write a note on Semi-Supervised Learning — real-world example and challenges."
+  },
+  {
+    "qid": "ml-5-5sxud7",
+    "subj": "ml",
+    "unit": 5,
+    "q": "How is ML used in text analysis and sentiment analysis?"
+  },
+  {
+    "qid": "ml-5-ru8ee8",
+    "subj": "ml",
+    "unit": 5,
+    "q": "What is Support Vector Machine? Explain with suitable example. (Unit V variant)"
+  },
+  {
+    "qid": "ml-5-n8l986",
+    "subj": "ml",
+    "unit": 5,
+    "q": "What are association rules? Explain minimum support, minimum confidence, frequent itemset."
+  },
+  {
+    "qid": "ml-5-fyxjry",
+    "subj": "ml",
+    "unit": 5,
+    "q": "Why is association rule mining a complex task?"
+  },
+  {
+    "qid": "ml-5-60qb1g",
+    "subj": "ml",
+    "unit": 5,
+    "q": "Explain advanced ensemble techniques / stacking with example."
+  },
+  {
+    "qid": "xml-1-6v3fam",
+    "subj": "xml",
+    "unit": 1,
+    "q": "Define XML / What is XML? Explain its features / benefits / basic rules for writing an XML document."
+  },
+  {
+    "qid": "xml-1-qtf7hl",
+    "subj": "xml",
+    "unit": 1,
+    "q": "Differentiate between XML and HTML (purpose, syntax, data handling — at least 3 differences)."
+  },
+  {
+    "qid": "xml-1-l31w9d",
+    "subj": "xml",
+    "unit": 1,
+    "q": "Explain elements and attributes in XML with examples (including empty elements)."
+  },
+  {
+    "qid": "xml-1-4i8ism",
+    "subj": "xml",
+    "unit": 1,
+    "q": "How to validate an XML document? Explain XML validation with a suitable example (DTD + Schema techniques)."
+  },
+  {
+    "qid": "xml-1-a6k5j8",
+    "subj": "xml",
+    "unit": 1,
+    "q": "Create / write an XML document structure for a Notebook (with notes, attributes for date and priority)."
+  },
+  {
+    "qid": "xml-1-9bazr4",
+    "subj": "xml",
+    "unit": 1,
+    "q": "Explain XML Tools and XML Validation with example."
+  },
+  {
+    "qid": "xml-2-qqwa4d",
+    "subj": "xml",
+    "unit": 2,
+    "q": "What is DTD? Explain its advantages and disadvantages."
+  },
+  {
+    "qid": "xml-2-vpxbm8",
+    "subj": "xml",
+    "unit": 2,
+    "q": "Explain internal and external DTDs and write differences between them (at least four)."
+  },
+  {
+    "qid": "xml-2-cb26d",
+    "subj": "xml",
+    "unit": 2,
+    "q": "Define all four DTD concepts with examples: (a) Element with children (b) Empty elements (c) Number of occurrences (d) Defining choices."
+  },
+  {
+    "qid": "xml-2-abiv1i",
+    "subj": "xml",
+    "unit": 2,
+    "q": "Write a DTD snippet / external DTD for a Notebook XML. Explain how to link DTD to an XML file."
+  },
+  {
+    "qid": "xml-2-505kjk",
+    "subj": "xml",
+    "unit": 2,
+    "q": "What do you mean by empty elements and number of occurrences in DTD? (short answer)"
+  },
+  {
+    "qid": "xml-3-rnpdkr",
+    "subj": "xml",
+    "unit": 3,
+    "q": "Explain simple and complex data types in XML Schema with examples."
+  },
+  {
+    "qid": "xml-3-byhghh",
+    "subj": "xml",
+    "unit": 3,
+    "q": "How to link and validate XML with a Schema (XSD)? Explain with example."
+  },
+  {
+    "qid": "xml-3-5837s8",
+    "subj": "xml",
+    "unit": 3,
+    "q": "Write an XML Schema (XSD) for a Notebook structure with &lt;note&gt; containing &lt;title&gt;, &lt;content&gt;, and a date attribute."
+  },
+  {
+    "qid": "xml-3-po4r0",
+    "subj": "xml",
+    "unit": 3,
+    "q": "Explain attributes in XML and restrictions on values with examples."
+  },
+  {
+    "qid": "xml-3-tcpeex",
+    "subj": "xml",
+    "unit": 3,
+    "q": "Analyze the advantages of using XML Schema over DTD and explain a scenario where Schema is preferable."
+  },
+  {
+    "qid": "xml-3-zeeusy",
+    "subj": "xml",
+    "unit": 3,
+    "q": "What is an XML Namespace? Why is it important?"
+  },
+  {
+    "qid": "xml-4-di0hp",
+    "subj": "xml",
+    "unit": 4,
+    "q": "Define xsl:output, xsl:template, and xsl:apply-templates with examples."
+  },
+  {
+    "qid": "xml-4-dijaog",
+    "subj": "xml",
+    "unit": 4,
+    "q": "How to transform an XML file into HTML using XSL transformation (XSLT)? Explain with example."
+  },
+  {
+    "qid": "xml-4-xl8quj",
+    "subj": "xml",
+    "unit": 4,
+    "q": "Create a XSLT for a Notebook XML and generate output in different conditions (with xsl:if / xsl:for-each)."
+  },
+  {
+    "qid": "xml-4-j4vmo5",
+    "subj": "xml",
+    "unit": 4,
+    "q": "What is XSL? Explain layout and templates for XSL. Describe linking XSL to an XML source with example."
+  },
+  {
+    "qid": "xml-4-rwt3s5",
+    "subj": "xml",
+    "unit": 4,
+    "q": "How does &lt;xsl:for-each&gt; loop work in XSLT? Give an example that loops over a list of nodes."
+  },
+  {
+    "qid": "xml-4-agunwh",
+    "subj": "xml",
+    "unit": 4,
+    "q": "How does &lt;xsl:if&gt; work in XSLT? Write an example where it is used to display elements based on a condition."
+  },
+  {
+    "qid": "xml-4-xfnjhy",
+    "subj": "xml",
+    "unit": 4,
+    "q": "What is the identity template in XSL? Why do you use it? Explain with example."
+  },
+  {
+    "qid": "xml-4-8881lr",
+    "subj": "xml",
+    "unit": 4,
+    "q": "Analyze the structure of an XSL document and explain how templates achieve separation of content and presentation."
+  },
+  {
+    "qid": "xml-5-m12onk",
+    "subj": "xml",
+    "unit": 5,
+    "q": "What is XPath? Explain how XPath is used to navigate an XML document (with location paths, axes, examples)."
+  },
+  {
+    "qid": "xml-5-g02tex",
+    "subj": "xml",
+    "unit": 5,
+    "q": "Explain different types of operators in XPath with examples (comparison, boolean, string — any five)."
+  },
+  {
+    "qid": "xml-5-jxpa25",
+    "subj": "xml",
+    "unit": 5,
+    "q": "What are predicates in XPath? Explain their uses and different conditions for using predicates."
+  },
+  {
+    "qid": "xml-5-155nfo",
+    "subj": "xml",
+    "unit": 5,
+    "q": "Enlist the types of nodes in XPath. How to define relationships among nodes?"
+  },
+  {
+    "qid": "xml-5-nfyo7q",
+    "subj": "xml",
+    "unit": 5,
+    "q": "What are the main features of XPath? (list at least 5)"
+  },
+  {
+    "qid": "xml-5-byxi5r",
+    "subj": "xml",
+    "unit": 5,
+    "q": "Compare ancestor:: and preceding-sibling:: axes in XPath with examples."
+  },
+  {
+    "qid": "xml-5-jqyv7q",
+    "subj": "xml",
+    "unit": 5,
+    "q": "Create an XML file for student information. Apply validation, schema, and XSLT for it and display in browser."
+  },
+  {
+    "qid": "rm-1-gmrgms",
+    "subj": "rm",
+    "unit": 1,
+    "q": "Explain the research process in detail (with diagram / feed-forward & feedback)."
+  },
+  {
+    "qid": "rm-1-ywv2z0",
+    "subj": "rm",
+    "unit": 1,
+    "q": "Differentiate between Research Method and Research Methodology with examples."
+  },
+  {
+    "qid": "rm-1-2onazk",
+    "subj": "rm",
+    "unit": 1,
+    "q": "Explain the key differences between Fundamental (Basic) and Applied Research with suitable examples."
+  },
+  {
+    "qid": "rm-1-kh41fd",
+    "subj": "rm",
+    "unit": 1,
+    "q": "Illustrate the characteristics of good research and explain how they contribute to reliable results."
+  },
+  {
+    "qid": "rm-1-skcb3m",
+    "subj": "rm",
+    "unit": 1,
+    "q": "Research is much concerned with proper fact finding, analysis, and evaluation. Do you agree? Give reasons."
+  },
+  {
+    "qid": "rm-1-5xgy91",
+    "subj": "rm",
+    "unit": 1,
+    "q": "Enlist the objectives / significance of research. What is the significance of research in modern society?"
+  },
+  {
+    "qid": "rm-1-f11vho",
+    "subj": "rm",
+    "unit": 1,
+    "q": "Explain Descriptive research with a suitable example."
+  },
+  {
+    "qid": "rm-2-48ikt3",
+    "subj": "rm",
+    "unit": 2,
+    "q": "Write the importance of a literature review in defining a problem. How is it helpful for identifying gap areas?"
+  },
+  {
+    "qid": "rm-2-13p4k1",
+    "subj": "rm",
+    "unit": 2,
+    "q": "Discuss the steps involved in defining and formulating a research problem. How does properly defining it contribute to a study's success?"
+  },
+  {
+    "qid": "rm-2-nns65y",
+    "subj": "rm",
+    "unit": 2,
+    "q": "What is a critical literature review, and how is it helpful for identifying gap areas in existing research?"
+  },
+  {
+    "qid": "rm-2-tfjli1",
+    "subj": "rm",
+    "unit": 2,
+    "q": "Explain primary and secondary sources of data collection (in the context of literature review)."
+  },
+  {
+    "qid": "rm-2-6yvrj7",
+    "subj": "rm",
+    "unit": 2,
+    "q": "Discuss how critically analyzing primary and secondary sources contributes to developing a well-defined research problem."
+  },
+  {
+    "qid": "rm-2-kruqbl",
+    "subj": "rm",
+    "unit": 2,
+    "q": "What are the criteria for identifying / selecting a research problem? What are the various sources to identify it?"
+  },
+  {
+    "qid": "rm-2-h2jcc9",
+    "subj": "rm",
+    "unit": 2,
+    "q": "What is a gap analysis in research? Explain with suitable examples."
+  },
+  {
+    "qid": "rm-3-u7kro5",
+    "subj": "rm",
+    "unit": 3,
+    "q": "Elaborate scientific misconducts in terms of FFP (Falsification, Fabrication, and Plagiarism) with examples."
+  },
+  {
+    "qid": "rm-3-ulb6mh",
+    "subj": "rm",
+    "unit": 3,
+    "q": "Explain the concept of plagiarism, intellectual honesty, and research integrity."
+  },
+  {
+    "qid": "rm-3-lmh6x",
+    "subj": "rm",
+    "unit": 3,
+    "q": "What are duplicate, overlapping, and redundant publications, and why are they considered research misconduct?"
+  },
+  {
+    "qid": "rm-3-2tzrss",
+    "subj": "rm",
+    "unit": 3,
+    "q": "Critically analyze the ethical concerns surrounding automated plagiarism detection tools (e.g., Turnitin), including false positives and data privacy."
+  },
+  {
+    "qid": "rm-3-783jgn",
+    "subj": "rm",
+    "unit": 3,
+    "q": "Write a short note on the nature of moral judgments and reactions. Differentiate descriptive vs. prescriptive moral judgment."
+  },
+  {
+    "qid": "rm-3-i6wzru",
+    "subj": "rm",
+    "unit": 3,
+    "q": "Explain the importance of maintaining intellectual honesty and ethical responsibility in scientific publication / publication ethics."
+  },
+  {
+    "qid": "rm-4-5h56i8",
+    "subj": "rm",
+    "unit": 4,
+    "q": "Describe the main steps involved in data processing and analysis (Editing, Coding, Classification, Tabulation)."
+  },
+  {
+    "qid": "rm-4-oibwrk",
+    "subj": "rm",
+    "unit": 4,
+    "q": "Discuss the significance of the null hypothesis in statistical testing. Explain Type I and Type II errors with examples."
+  },
+  {
+    "qid": "rm-4-xkhkxs",
+    "subj": "rm",
+    "unit": 4,
+    "q": "Explain the process of hypothesis testing in detail (with flow diagram)."
+  },
+  {
+    "qid": "rm-4-1zck5i",
+    "subj": "rm",
+    "unit": 4,
+    "q": "Describe the process of data collection, processing, and analysis with suitable examples."
+  },
+  {
+    "qid": "rm-4-67tyeo",
+    "subj": "rm",
+    "unit": 4,
+    "q": "Explain the concept of p-value in statistical hypothesis testing and common thresholds to interpret it."
+  },
+  {
+    "qid": "rm-4-856bu7",
+    "subj": "rm",
+    "unit": 4,
+    "q": "A researcher claims average social media time > 3 hrs. Sample mean = 3.5 hrs, SD = 1.2, n = 50, α = 0.05. Test the hypothesis."
+  },
+  {
+    "qid": "rm-5-l2q84t",
+    "subj": "rm",
+    "unit": 5,
+    "q": "Analyze the differences between citation databases Web of Science (WoS) and Scopus in terms of coverage and indexing."
+  },
+  {
+    "qid": "rm-5-axro0n",
+    "subj": "rm",
+    "unit": 5,
+    "q": "Explain the use of reference management tools like Zotero / Mendeley / EndNote (integration with word processors, bibliography generation)."
+  },
+  {
+    "qid": "rm-5-qclvnx",
+    "subj": "rm",
+    "unit": 5,
+    "q": "Explain the importance of proper referencing, footnotes, and bibliography in research documentation."
+  },
+  {
+    "qid": "rm-5-xwnjlv",
+    "subj": "rm",
+    "unit": 5,
+    "q": "What are the key sections of a research report and what purpose does each section serve?"
+  },
+  {
+    "qid": "rm-5-t706nb",
+    "subj": "rm",
+    "unit": 5,
+    "q": "Explain formulation rules for writing a research report."
+  },
+  {
+    "qid": "rm-5-m4q7rt",
+    "subj": "rm",
+    "unit": 5,
+    "q": "Discuss various types of research metrics and their significance in academic performance measurement."
+  }
+]

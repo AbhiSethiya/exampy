@@ -22,6 +22,108 @@ function saveState() {
   localStorage.setItem("mastered", JSON.stringify(mastered));
 }
 
+// Gemini API key (stored in localStorage)
+let geminiApiKey = localStorage.getItem("gemini_api_key") || "";
+
+// Answer cache (persisted in localStorage)
+let answerCache = JSON.parse(localStorage.getItem("answer_cache") || "{}");
+function saveAnswerCache() {
+  localStorage.setItem("answer_cache", JSON.stringify(answerCache));
+}
+
+// Fetch answer from Gemini API
+async function fetchGeminiAnswer(question, qId, answerContainer) {
+  // Check cache first
+  if (answerCache[qId]) {
+    renderAnswer(answerContainer, answerCache[qId], qId);
+    return;
+  }
+
+  if (!geminiApiKey) {
+    openApiKeyModal();
+    return;
+  }
+
+  // Show loading
+  answerContainer.innerHTML = `
+    <div class="answer-panel">
+      <div class="answer-loading">
+        <div class="spinner"></div>
+        <span>Generating answer with Gemini...</span>
+      </div>
+    </div>
+  `;
+
+  try {
+    const response = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${geminiApiKey}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          contents: [{
+            parts: [{
+              text: `You are an exam preparation assistant. Answer the following exam question in a clear, detailed, and well-structured way suitable for a university exam. Use headings, bullet points, examples, and diagrams (in text) where appropriate. Keep the answer concise but comprehensive enough to score full marks.\n\nQuestion: ${question}`
+            }]
+          }]
+        })
+      }
+    );
+
+    if (!response.ok) {
+      const errData = await response.json().catch(() => ({}));
+      if (response.status === 400 || response.status === 403) {
+        throw new Error("Invalid API key. Click 🔑 to update it.");
+      }
+      throw new Error(errData.error?.message || `API error (${response.status})`);
+    }
+
+    const data = await response.json();
+    const answerText = data.candidates?.[0]?.content?.parts?.[0]?.text || "No answer generated.";
+
+    // Cache the answer
+    answerCache[qId] = answerText;
+    saveAnswerCache();
+
+    renderAnswer(answerContainer, answerText, qId);
+  } catch (err) {
+    answerContainer.innerHTML = `
+      <div class="answer-panel">
+        <div class="answer-error">❌ ${err.message}</div>
+      </div>
+    `;
+  }
+}
+
+function renderAnswer(container, answerText, qId) {
+  const renderedHtml = typeof marked !== 'undefined' ? marked.parse(answerText) : answerText.replace(/\n/g, '<br>');
+  container.innerHTML = `
+    <div class="answer-panel">
+      <div class="answer-panel-header">
+        <span>✨ Gemini Answer</span>
+        <button class="answer-close-btn" data-qid="${qId}" title="Close answer">✕</button>
+      </div>
+      <div class="answer-body">${renderedHtml}</div>
+    </div>
+  `;
+  // Close button
+  container.querySelector('.answer-close-btn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    container.innerHTML = '';
+  });
+}
+
+function openApiKeyModal() {
+  const modal = document.getElementById('api-key-modal');
+  const input = document.getElementById('api-key-input');
+  input.value = geminiApiKey;
+  modal.style.display = 'flex';
+}
+
+function closeApiKeyModal() {
+  document.getElementById('api-key-modal').style.display = 'none';
+}
+
 // Simple hash function for generating unique IDs based on text
 function hashString(str) {
   let hash = 0;
@@ -69,6 +171,18 @@ function init() {
 
   document.getElementById("print-btn").addEventListener("click", () => {
     window.print();
+  });
+
+  // API Key Modal
+  document.getElementById("api-key-btn").addEventListener("click", openApiKeyModal);
+  document.getElementById("api-key-save").addEventListener("click", () => {
+    geminiApiKey = document.getElementById("api-key-input").value.trim();
+    localStorage.setItem("gemini_api_key", geminiApiKey);
+    closeApiKeyModal();
+  });
+  document.getElementById("api-key-cancel").addEventListener("click", closeApiKeyModal);
+  document.getElementById("api-key-modal").addEventListener("click", (e) => {
+    if (e.target === e.currentTarget) closeApiKeyModal();
   });
   renderTabs();
   renderLegend();
@@ -286,10 +400,8 @@ function renderContent() {
       item.innerHTML = `
         <input type="checkbox" class="master-checkbox" data-id="${qId}" ${isDone ? "checked" : ""} title="Mark as mastered" style="margin-top: 4px; cursor: pointer; transform: scale(1.2);">
         <div class="q-num" style="${isDone ? 'opacity: 0.5;' : ''}">${qIndex + 1}.</div>
-        <div class="q-text" style="${isDone ? 'opacity: 0.5; text-decoration: line-through;' : ''}">
-          <a href="https://www.google.com/search?q=${encodeURIComponent(q.q)}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; cursor: pointer;" title="Search this question on Google">
-            ${q.q}
-          </a>
+        <div class="q-text" data-question="${q.q.replace(/"/g, '&quot;')}" data-qid="${qId}" style="${isDone ? 'opacity: 0.5; text-decoration: line-through;' : ''}" title="Click to get AI answer">
+          ${q.q}
         </div>
         <div class="q-meta">
           <div style="display: flex; align-items: center; gap: 8px;">
@@ -299,14 +411,16 @@ function renderContent() {
             <span class="badge" style="background:${badgeData.bg};color:${badgeData.color}">
               ${badgeData.label}
             </span>
+            <button class="gemini-search-btn" data-question="${q.q.replace(/"/g, '&quot;')}" style="background: none; border: none; cursor: pointer; font-size: 1.1rem; opacity: 0.7; transition: opacity 0.2s; margin-left: 4px;" title="Copy question and open Gemini web app">✨</button>
           </div>
           ${marksHtml}
         </div>
+        <div class="answer-container" id="answer-${qId}"></div>
       `;
       qList.appendChild(item);
     });
 
-    // Add event listeners for bookmarks and checkboxes (after appending to DOM)
+    // Add event listeners for bookmarks, checkboxes, and question clicks (after appending to DOM)
     setTimeout(() => {
       const checkboxes = qList.querySelectorAll('.master-checkbox');
       checkboxes.forEach(cb => {
@@ -323,6 +437,22 @@ function renderContent() {
         });
       });
 
+      const geminiBtns = qList.querySelectorAll('.gemini-search-btn');
+      geminiBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const question = e.currentTarget.dataset.question;
+          const prompt = `Please provide a detailed, well-structured, and accurate answer to the following university-level computer science exam question: "${question}". Format the answer in Markdown, using bullet points or numbered lists where appropriate for clarity.`;
+          navigator.clipboard.writeText(prompt).then(() => {
+            alert('Prompt copied to clipboard! Paste it into Gemini.');
+            window.open('https://gemini.google.com/app', '_blank');
+          }).catch(err => {
+            console.error('Failed to copy text: ', err);
+            window.open('https://gemini.google.com/app', '_blank');
+          });
+        });
+      });
+
       const favBtns = qList.querySelectorAll('.fav-btn');
       favBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -335,6 +465,35 @@ function renderContent() {
           }
           saveState();
           renderContent(); // re-render to update icon and filters
+        });
+      });
+
+      // Question click -> inline answer
+      const qTexts = qList.querySelectorAll('.q-text');
+      qTexts.forEach(qt => {
+        qt.addEventListener('click', (e) => {
+          const question = qt.dataset.question;
+          const qid = qt.dataset.qid;
+          const answerContainer = document.getElementById(`answer-${qid}`);
+          if (!answerContainer) return;
+
+          // Toggle: if answer already shown, close it
+          if (answerContainer.innerHTML.trim() !== '') {
+            answerContainer.innerHTML = '';
+            return;
+          }
+
+          // Check if answer is pre-generated in answers.js
+          if (typeof answersData !== 'undefined' && answersData[qid]) {
+            answerContainer.innerHTML = `
+              <div class="generated-answer" style="margin-top: 10px; padding: 15px; background: rgba(0,0,0,0.03); border-left: 4px solid var(--primary-color); border-radius: 4px; font-size: 0.95rem; line-height: 1.6;">
+                ${marked.parse ? marked.parse(answersData[qid]) : answersData[qid].replace(/\n/g, '<br>')}
+              </div>
+            `;
+          } else {
+            // Fallback to fetching via API key if not pre-generated
+            fetchGeminiAnswer(question, qid, answerContainer);
+          }
         });
       });
     }, 0);
