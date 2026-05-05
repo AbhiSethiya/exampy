@@ -445,7 +445,7 @@ function renderContent() {
           const prompt = `I'm studying this material for an exam. Explain it as if I'm learning it for the first time, not revising. Break concepts down step by step. Define terms before using them. Show how ideas connect, not just conclusions. After explaining, summarize it in exam-ready language. Then give me 2-3 short questions to test whether I actually understood it.\n\nQuestion: "${question}"\n\nDon't skip steps. Assume I will be graded on explanation, not just correctness. If the material is ambiguous, say so instead of guessing.`;
           
           // Open ChatGPT with the prompt automatically filled and searched
-          const url = \`https://chatgpt.com/?q=\${encodeURIComponent(prompt)}\`;
+          const url = `https://chatgpt.com/?q=${encodeURIComponent(prompt)}`;
           window.open(url, '_blank');
         });
       });
