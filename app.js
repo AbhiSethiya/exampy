@@ -411,7 +411,7 @@ function renderContent() {
             <span class="badge" style="background:${badgeData.bg};color:${badgeData.color}">
               ${badgeData.label}
             </span>
-            <button class="gemini-search-btn" data-question="${q.q.replace(/"/g, '&quot;')}" style="background: none; border: none; cursor: pointer; font-size: 1.1rem; opacity: 0.7; transition: opacity 0.2s; margin-left: 4px;" title="Copy question and open Gemini web app">✨</button>
+            <button class="chatgpt-search-btn" data-question="${q.q.replace(/"/g, '&quot;')}" style="background: none; border: none; cursor: pointer; font-size: 1.1rem; opacity: 0.7; transition: opacity 0.2s; margin-left: 4px;" title="Ask ChatGPT (Auto-Search)">🤖</button>
           </div>
           ${marksHtml}
         </div>
@@ -437,21 +437,16 @@ function renderContent() {
         });
       });
 
-      const geminiBtns = qList.querySelectorAll('.gemini-search-btn');
-      geminiBtns.forEach(btn => {
+      const chatgptBtns = qList.querySelectorAll('.chatgpt-search-btn');
+      chatgptBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
           e.stopPropagation();
           const question = e.currentTarget.dataset.question;
           const prompt = `I'm studying this material for an exam. Explain it as if I'm learning it for the first time, not revising. Break concepts down step by step. Define terms before using them. Show how ideas connect, not just conclusions. After explaining, summarize it in exam-ready language. Then give me 2-3 short questions to test whether I actually understood it.\n\nQuestion: "${question}"\n\nDon't skip steps. Assume I will be graded on explanation, not just correctness. If the material is ambiguous, say so instead of guessing.`;
-          navigator.clipboard.writeText(prompt).then(() => {
-            const originalHtml = btn.innerHTML;
-            btn.innerHTML = '✅ <span style="font-size: 0.8rem">Copied! Paste it!</span>';
-            setTimeout(() => { btn.innerHTML = originalHtml; }, 3000);
-            window.open('https://gemini.google.com/app', '_blank');
-          }).catch(err => {
-            console.error('Failed to copy text: ', err);
-            window.open('https://gemini.google.com/app', '_blank');
-          });
+          
+          // Open ChatGPT with the prompt automatically filled and searched
+          const url = \`https://chatgpt.com/?q=\${encodeURIComponent(prompt)}\`;
+          window.open(url, '_blank');
         });
       });
 
