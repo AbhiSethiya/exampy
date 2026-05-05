@@ -444,7 +444,6 @@ function renderContent() {
           const question = e.currentTarget.dataset.question;
           const prompt = `Please provide a detailed, well-structured, and accurate answer to the following university-level computer science exam question: "${question}". Format the answer in Markdown, using bullet points or numbered lists where appropriate for clarity.`;
           navigator.clipboard.writeText(prompt).then(() => {
-            alert('Prompt copied to clipboard! Paste it into Gemini.');
             window.open('https://gemini.google.com/app', '_blank');
           }).catch(err => {
             console.error('Failed to copy text: ', err);
