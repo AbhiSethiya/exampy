@@ -7,12 +7,30 @@ let filterFavorites = false;
 let filterMastered = false;
 
 // Persistent state
+// Migration: clear old hash-based IDs (v1 format) if present
+const ID_VERSION = "v2";
+if (localStorage.getItem("id_version") !== ID_VERSION) {
+  localStorage.removeItem("bookmarks");
+  localStorage.removeItem("mastered");
+  localStorage.setItem("id_version", ID_VERSION);
+}
 let bookmarks = JSON.parse(localStorage.getItem("bookmarks") || "[]");
 let mastered = JSON.parse(localStorage.getItem("mastered") || "[]");
 
 function saveState() {
   localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
   localStorage.setItem("mastered", JSON.stringify(mastered));
+}
+
+// Simple hash function for generating unique IDs based on text
+function hashString(str) {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash |= 0; // Convert to 32bit integer
+  }
+  return Math.abs(hash).toString(36);
 }
 
 // DOM Elements
@@ -193,7 +211,7 @@ function renderContent() {
 
     // Filter questions by search query and checkboxes
     let filteredQuestions = unitObj.questions.filter(q => {
-      const qId = `${activeSubjectId}-${unitObj.unit}-${btoa(unescape(encodeURIComponent(q.q))).substring(0, 10)}`;
+      const qId = `${activeSubjectId}-u${unitObj.unit}-q${unitObj.questions.indexOf(q)}`;
       q._id = qId; // Attach id for rendering
       
       const matchesSearch = q.q.toLowerCase().includes(searchQuery);
