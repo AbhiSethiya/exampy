@@ -325,7 +325,7 @@ function renderContent() {
 
     // Filter questions by search query and checkboxes
     let filteredQuestions = unitObj.questions.filter(q => {
-      const qId = `${activeSubjectId}-u${unitObj.unit}-q${unitObj.questions.indexOf(q)}`;
+      const qId = `${activeSubjectId}-${unitObj.unit}-${hashString(q.q)}`;
       q._id = qId; // Attach id for rendering
       
       const matchesSearch = q.q.toLowerCase().includes(searchQuery);
