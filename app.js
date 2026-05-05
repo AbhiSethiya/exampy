@@ -442,7 +442,7 @@ function renderContent() {
         btn.addEventListener('click', (e) => {
           e.stopPropagation();
           const question = e.currentTarget.dataset.question;
-          const prompt = `Please provide a detailed, well-structured, and accurate answer to the following university-level computer science exam question: "${question}". Format the answer in Markdown, using bullet points or numbered lists where appropriate for clarity.`;
+          const prompt = `I'm studying this material for an exam. Explain it as if I'm learning it for the first time, not revising. Break concepts down step by step. Define terms before using them. Show how ideas connect, not just conclusions. After explaining, summarize it in exam-ready language. Then give me 2-3 short questions to test whether I actually understood it.\n\nQuestion: "${question}"\n\nDon't skip steps. Assume I will be graded on explanation, not just correctness. If the material is ambiguous, say so instead of guessing.`;
           navigator.clipboard.writeText(prompt).then(() => {
             window.open('https://gemini.google.com/app', '_blank');
           }).catch(err => {
